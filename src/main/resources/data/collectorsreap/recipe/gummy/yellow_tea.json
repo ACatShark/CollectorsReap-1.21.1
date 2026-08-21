@@ -1,0 +1,44 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "yellow_tea_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "c:tea_leaves/yellow"
+                                                                 }
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "farmersrespite"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  1.0,
+    "ingredients":  [
+                        {
+                            "tag":  "c:tea_leaves/yellow"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_bottle"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:yellow_tea_gummy"
+               }
+}

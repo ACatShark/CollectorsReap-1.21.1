@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stuffed_pasta_shells"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cream_cheese"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/dough"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "tag": "c:cheese/mild/cream"
+    },
+    {
+      "tag": "c:mushrooms"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:stuffed_pasta_shells"
+  }
+}

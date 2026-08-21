@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "bulbous_rose"
+                                },
+                                {
+                                    "type":  "neoforge:not",
+                                    "value":  {
+                                                  "type":  "neoforge:item_exists",
+                                                  "item":  "sunflowerdelight:rosebud"
+                                              }
+                                },
+                                {
+                                    "type":  "neoforge:item_exists",
+                                    "item":  "farmersrespite:rose_hips"
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:bulbous_rose"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "farmersrespite:rose_hips", "count": 2 } },
+                   { "item": { "id": "minecraft:pink_dye", "count": 1 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

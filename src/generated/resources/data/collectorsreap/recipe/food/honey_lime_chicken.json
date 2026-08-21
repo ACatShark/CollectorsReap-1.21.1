@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "honey_lime_chicken"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_chicken"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "c:fruits/lime"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:crops/rice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:honey_lime_chicken"
+  }
+}

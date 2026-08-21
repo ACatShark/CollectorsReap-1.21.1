@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "baked_portobello_cap"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stuffed_portobello_cap"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "collectorsreap:baked_portobello_cap"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:crops/tomato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:stuffed_portobello_cap"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pearly_claw"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chieftain_claw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:chieftain_claw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:pearly_claw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chieftain_claw"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:pearly_claw"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "carbonara_pasta"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cream_cheese"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "farmersdelight:bacon"
+    },
+    {
+      "tag": "c:foods/pasta"
+    },
+    {
+      "tag": "c:cheese/mild/cream"
+    },
+    {
+      "tag": "c:mushrooms"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:carbonara_pasta"
+  }
+}

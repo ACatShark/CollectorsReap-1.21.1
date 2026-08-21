@@ -1,0 +1,44 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "green_tea_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "c:tea_leaves/green"
+                                                                 }
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "farmersrespite"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  1.0,
+    "ingredients":  [
+                        {
+                            "tag":  "c:tea_leaves/green"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_bottle"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:green_tea_gummy"
+               }
+}

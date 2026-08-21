@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate_crate"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "collectorsreap:stygian_pomegranate_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "collectorsreap:stygian_pomegranate"
+  }
+}

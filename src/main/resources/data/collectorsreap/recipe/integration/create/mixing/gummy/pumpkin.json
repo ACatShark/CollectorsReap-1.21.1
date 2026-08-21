@@ -1,0 +1,50 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pumpkin_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "seasonals:pumpkin_puree"
+                                                                 }
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "seasonals"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "create"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "tag":  "seasonals:pumpkin_puree"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:pumpkin_gummy"
+                    }
+                ]
+}

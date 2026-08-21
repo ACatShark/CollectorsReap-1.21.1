@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "vernal_purge"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "strong_vernal_purge"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "candied_lime"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersrespite"
+                                }
+                            ],
+    "type":  "farmersrespite:kettle_pouring",
+    "amount":  250,
+    "container":  {
+                      "item":  "minecraft:glass_bottle"
+                  },
+    "fluid":  "collectorsreap:strong_vernal_purge",
+    "output":  {
+                   "id":  "collectorsreap:strong_vernal_purge"
+               }
+}

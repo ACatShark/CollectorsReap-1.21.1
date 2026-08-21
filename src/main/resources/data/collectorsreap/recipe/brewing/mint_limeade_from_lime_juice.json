@@ -1,0 +1,51 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lime"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lime_slice"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "limeade"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "mint_limeade"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "neapolitan"
+                                },
+                                {
+                                    "type":  "neoforge:not",
+                                    "value":  {
+                                                  "type":  "neoforge:tag_empty",
+                                                  "tag":  "neapolitan:mint_leaves"
+                                              }
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersrespite"
+                                }
+                            ],
+    "type":  "farmersrespite:brewing",
+    "base":  {
+                 "count":  1000,
+                 "fluid":  "collectorsreap:lime_juice"
+             },
+    "cookingtime":  2400,
+    "experience":  0.35,
+    "ingredients":  [
+                        {
+                            "tag":  "neapolitan:mint_leaves"
+                        }
+                    ],
+    "result":  {
+                   "count":  1000,
+                   "fluid":  "collectorsreap:mint_limeade"
+               }
+}

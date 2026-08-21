@@ -1,0 +1,133 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.144'
+}
+
+version = mod_version
+group = 'net.brdle'
+
+base {
+    archivesName = "${mod_id}-${mc_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = neo_version
+
+    parchment {
+        mappingsVersion = parchment_version
+        minecraftVersion = parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath(), '--existing', file('build/extracted_resources/').getAbsolutePath()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+
+    accessTransformers = ['src/main/resources/META-INF/accesstransformer.cfg']
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Team Abnormals'
+        url = 'https://maven.teamabnormals.com'
+    }
+    maven {
+        name = 'CurseMaven'
+        url = 'https://www.cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+    }
+}
+
+dependencies {
+    // Team Abnormals
+    implementation "com.teamabnormals:blueprint:${blueprint_version}"
+    implementation "com.teamabnormals:boatload:${boatload_version}"
+    compileOnly "curse.maven:neapolitan-382016:${neapolitan_file_id}"
+
+    // Farmer's Delight ecosystem
+    implementation "curse.maven:farmers-delight-398521:${farmers_delight_file_id}"
+    implementation "curse.maven:brewin-and-chewin-637808:${brewin_and_chewin_file_id}"
+
+    // Misc
+    implementation "curse.maven:jade-324717:${jade_file_id}"
+    compileOnly "curse.maven:jei-238222:${jei_file_id}"
+    runtimeOnly "curse.maven:jei-238222:${jei_file_id}"
+
+    // Farmer's Respite (1.21.1 Unofficial Port, local fixed build)
+    runtimeOnly files("libs/farmersrespite-1.21.1-3.0.0.jar")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// Extract assets/data from dependency mod jars so datagen can validate/resolve parent models and textures
+tasks.register('extractDatagenResources', Copy) {
+    dependsOn 'createMinecraftArtifacts'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from({ configurations.runtimeClasspath.collect { zipTree(it) } })
+    into file('build/extracted_resources/')
+    include 'assets/**', 'data/**'
+    exclude 'assets/minecraft/**', 'data/minecraft/**'
+}
+
+tasks.named('runData') {
+    dependsOn 'extractDatagenResources'
+}
+
+processResources {
+    inputs.property 'mod_version', mod_version
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand 'mod_version': mod_version
+    }
+}
+
+tasks.named('jar', Jar) {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_author,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_author,
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}

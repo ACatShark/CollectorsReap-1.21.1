@@ -1,0 +1,34 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "bulbous_rose"
+                                },
+                                {
+                                    "type":  "neoforge:not",
+                                    "value":  {
+                                                  "type":  "neoforge:mod_loaded",
+                                                  "modid":  "farmersrespite"
+                                              }
+                                },
+                                {
+                                    "type":  "neoforge:not",
+                                    "value":  {
+                                                  "type":  "neoforge:mod_loaded",
+                                                  "modid":  "sunflowerdelight"
+                                              }
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:bulbous_rose"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "minecraft:pink_dye", "count": 3 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

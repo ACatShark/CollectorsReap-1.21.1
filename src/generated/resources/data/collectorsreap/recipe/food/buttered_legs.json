@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "buttered_legs"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "collectorsreap:chieftain_leg"
+    },
+    {
+      "item": "collectorsreap:chieftain_leg"
+    },
+    {
+      "item": "collectorsreap:chieftain_leg"
+    },
+    {
+      "tag": "c:drinks/milk"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:buttered_legs"
+  }
+}

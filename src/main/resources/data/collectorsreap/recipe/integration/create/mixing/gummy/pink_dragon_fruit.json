@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pink_dragon_fruit_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "create"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:pink_dragon_fruit"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:pink_dragon_fruit_gummy"
+                    }
+                ]
+}

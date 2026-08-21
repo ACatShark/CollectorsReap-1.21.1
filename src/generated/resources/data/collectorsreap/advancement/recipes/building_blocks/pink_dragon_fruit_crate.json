@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit_crate"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_dragon_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:pink_dragon_fruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:pink_dragon_fruit_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink_dragon_fruit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:pink_dragon_fruit_crate"
+    ]
+  }
+}

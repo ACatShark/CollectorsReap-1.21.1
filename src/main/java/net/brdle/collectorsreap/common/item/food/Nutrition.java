@@ -1,0 +1,641 @@
+package net.brdle.collectorsreap.common.item.food;
+
+import net.brdle.collectorsreap.common.effect.CREffects;
+import net.brdle.collectorsreap.common.effect.SurgeEffect;
+import net.brdle.collectorsreap.compat.CompatEffects;
+import net.brdle.collectorsreap.compat.Modid;
+import net.brdle.collectorsreap.compat.abnormals.BuzzierBeesCompat;
+import net.brdle.collectorsreap.compat.abnormals.NeapolitanCompat;
+import net.brdle.collectorsreap.compat.mynethersdelight.MNDCompat;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.food.FoodProperties;
+import vectorwing.farmersdelight.common.registry.ModEffects;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
+
+public class Nutrition {
+	public static final FoodProperties LUCUMA = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties GILDED_LUCUMA = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 3600, 3), 1F).build();
+	public static final FoodProperties LUCUMA_BREAD = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.45F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1600, 0), 1F).build();
+	public static final FoodProperties LUCUMA_PUDDING = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.65F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1200, 1), 1F).build();
+	public static final FoodProperties LUCUMA_GAZPACHO = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.7F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 6000, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 2400, 0), 1F).build();
+	public static final FoodProperties LUCUMA_GAZPACHO_CUP = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.35F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 3000, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties PINK_DRAGON_FRUIT = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			400,
+			0,
+			false,
+			false,
+			true
+		), 1F).build();
+	public static final FoodProperties DRIED_PINK_DRAGON_FRUIT = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.4F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			800,
+			0,
+			false,
+			false,
+			true
+		), 1F).build();
+	public static final FoodProperties PINK_NOODLES = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.9F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			800,
+			0,
+			false,
+			false,
+			true
+		), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties DRAGON_STEW = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.1F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			800,
+			0,
+			false,
+			false,
+			true
+		), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties DRAGON_STEW_CUP = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.55F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			400,
+			0,
+			false,
+			false,
+			true
+		), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1800, 0), 1F).build();
+	public static final FoodProperties TROPICAL_SHAVED_ICE = (new FoodProperties.Builder())
+		.nutrition(15).saturationModifier(0.6F)
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 4, false, true, true), 1F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			800,
+			0,
+			false,
+			false,
+			true
+		), 1F).build();
+	public static final FoodProperties PANETTONE_SLICE = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.75F)
+		.fast()
+		.build();
+	public static final FoodProperties LIME = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 200, 0), 1F).build();
+	public static final FoodProperties LIME_SLICE = (new FoodProperties.Builder())
+		.nutrition(1).saturationModifier(0.2F).fast()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 100, 0), 1F).build();
+	public static final FoodProperties LIME_PIE_SLICE = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.2F)
+		.fast()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 300, 1), 1F).build();
+	public static final FoodProperties LIME_POPSICLE = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.2F)
+		.fast()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 0), 1F).build();
+	public static final FoodProperties LIME_COOKIE = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 100, 0), 1F).build();
+	public static final FoodProperties HONEY_LIME_CHICKEN = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties MEDITERRANEAN_SALMON = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties SALMON_TARTARE = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.65F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POTATO_FRITTERS = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 0), 1F).build();
+	public static final FoodProperties CANDIED_LIME = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(1.1F).fast()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 0), 1F).build();
+	public static final FoodProperties COD_CEVICHE = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(0.7F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_SLICE = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.5F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 200, 0), 1F).build();
+	public static final FoodProperties STYGIAN_POMEGRANATE = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.4F).alwaysEdible()
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 400, 4), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 180, 1), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 180, 1), 1F).build();
+	public static final FoodProperties POMEGRANATE_SEEDS = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.5F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 100, 0), 1F).build();
+	public static final FoodProperties BAKED_PORTOBELLO_CAP = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.75F).build();
+	public static final FoodProperties STUFFED_PORTOBELLO_CAP = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.8F).build();
+	public static final FoodProperties PORTOBELLO_RICE_SOUP = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 3600, 0), 1F).build();
+	public static final FoodProperties PORTOBELLO_RICE_SOUP_CUP = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.4F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 1800, 0), 1F).build();
+	public static final FoodProperties PORTOBELLO_RISOTTO = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties PORTOBELLO_PASTA = (new FoodProperties.Builder())
+		.nutrition(13).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties PORTOBELLO_WRAP = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.8F).build();
+	public static final FoodProperties PORTOBELLO_QUICHE_SLICE = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.4F).build();
+	public static final FoodProperties PORTOBELLO_BURGER = (new FoodProperties.Builder()).nutrition(12).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0), 1F).build();
+	public static final FoodProperties CRIMSON_CARROT_ROAST = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.5F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_MUTTON = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_PORK = (new FoodProperties.Builder())
+		.nutrition(16).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_CHICKEN = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_CUSTARD = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.65F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 400, 0), 1F).build();
+	public static final FoodProperties GLAZED_STRIDER = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties SPICY_GRENADINE_JELLY = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(1.2F)
+		.effect(() -> new MobEffectInstance(MNDCompat.getBeneficialPungent(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_SMOOTHIE = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.2F)
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getAgility(), 600, 0), 1F).build();
+	public static final FoodProperties LIMEADE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(3).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties STRONG_LIMEADE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(3).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 1), 1F).build();
+	public static final FoodProperties BERRY_LIMEADE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(5).saturationModifier(0.2F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties PINK_LIMEADE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(5).saturationModifier(1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties MINT_LIMEADE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(6).saturationModifier(0.35F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getBerserking(), 1200, 0), 1F).build();
+	public static final FoodProperties DRAGONS_PASSION = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(5).saturationModifier(1F)
+		.effect(() -> new MobEffectInstance(
+			CREffects.SURGE.getDelegate(),
+			800,
+			0,
+			false,
+			false,
+			true
+		), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getSpitting(), 800, 1), 1F).build();
+	public static final FoodProperties LIME_GREEN_TEA = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getVitality(), 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_BLACK_TEA = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getMaturity(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1200, 0), 1F).build();
+	public static final FoodProperties VERNAL_PURGE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 0), 1F).build();
+	public static final FoodProperties STRONG_VERNAL_PURGE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 200, 1), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 0), 1F).build();
+	public static final FoodProperties LIMBO_BREW = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 1F).build();
+	public static final FoodProperties STRONG_LIMBO_BREW = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 1), 1F).build();
+	public static final FoodProperties SWEET_RECOVERY = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 1), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 600, 2), 1F).build();
+	public static final FoodProperties LONG_SWEET_RECOVERY = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1200, 1), 1F).build();
+	public static final FoodProperties STRONG_SWEET_RECOVERY = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 2), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 300, 3), 1F).build();
+	public static final FoodProperties DELUXE_SALAD = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 600, 0), 1F).build();
+	public static final FoodProperties CREAM_CHEESE = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.5F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F).build();
+	public static final FoodProperties PRAWN_SPREAD = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F).build();
+	public static final FoodProperties CARBONARA_PASTA = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 0), 1F).build();
+	public static final FoodProperties STUFFED_PASTA_SHELLS = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.9F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties BULLET_PEPPER_POPPER = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(MNDCompat.getBeneficialPungent(), 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F).build();
+	public static final FoodProperties CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties LUCUMA_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 600, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties COFFEE_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getCaffeinated(), 400, 2), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties CHOCOLATE_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 600, 1), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties MINT_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getBerserking(), 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties STRAWBERRY_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties VANILLA_CANNOLI = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(1.25F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getVanillaScent(), 200, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F).build();
+	public static final FoodProperties STRAWBERRY_JAM_BUN = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.55F)
+		.effect(() -> new MobEffectInstance(MobEffects.HEAL, 1, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 0), 1F).build();
+	public static final FoodProperties POMEGRANATE_BEAN_SALAD = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.35F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getHarmony(), 400, 0), 1F).build();
+	public static final FoodProperties CHOCOLATE_ARILS = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.25F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 200, 1), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 1), 1F).build();
+	public static final FoodProperties LIME_CAKE_SLICE = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.fast()
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 300, 0), 1F)
+		.build();
+	public static final FoodProperties POMEGRANATE_CAKE_SLICE = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.fast()
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 300, 0), 1F)
+		.build();
+	public static final FoodProperties PINK_DRAGON_FRUIT_CAKE_SLICE = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.fast()
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.SURGE.getDelegate(), 300, 0), 1F)
+		.build();
+	public static final FoodProperties LUCUMA_CAKE_SLICE = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.fast()
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 300, 0), 1F)
+		.build();
+	public static final FoodProperties LIME_ICE_CREAM = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 1200, 1), 1F)
+		.build();
+	public static final FoodProperties POMEGRANATE_ICE_CREAM = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 1600, 1), 1F)
+		.build();
+	public static final FoodProperties PINK_DRAGON_FRUIT_ICE_CREAM = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.SURGE.getDelegate(), 1600, 0, false, false, true), 1F)
+		.build();
+	public static final FoodProperties LUCUMA_ICE_CREAM = (new FoodProperties.Builder())
+		.nutrition(6).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1600, 2), 1F)
+		.build();
+	public static final FoodProperties SUNNY_ICE_CREAM = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1600, 1), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getVanillaScent(), 200, 0), 1F)
+		.build();
+	public static final FoodProperties SUNNY_ICE_CREAM_SUNNY = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.3F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1600, 1), 1F)
+		.effect(() -> new MobEffectInstance(BuzzierBeesCompat.getSunny(), 1600, 0), 1F)
+		.effect(() -> new MobEffectInstance(NeapolitanCompat.getVanillaScent(), 200, 0), 1F)
+		.build();
+	public static final FoodProperties LIME_MILKSHAKE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(2).saturationModifier(1.5F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 600, 1), 1F)
+		.build();
+	public static final FoodProperties POMEGRANATE_MILKSHAKE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(2).saturationModifier(1.5F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 800, 1), 1F)
+		.build();
+	public static final FoodProperties PINK_DRAGON_FRUIT_MILKSHAKE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(2).saturationModifier(1.5F)
+		.effect(() -> new MobEffectInstance(CREffects.SURGE.getDelegate(), 800, 0, false, false, true), 1F)
+		.build();
+	public static final FoodProperties LUCUMA_MILKSHAKE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(2).saturationModifier(1.5F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 1600, 0), 1F)
+		.build();
+	public static final FoodProperties DEIFIC_BLOOD = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getTipsy(), 2400, 2), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getIntoxication(), 1800, 1), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getRaging(), 2400, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1800, 0), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 2400, 4), 1F)
+		.build();
+	public static final FoodProperties HERMITS_SOUR = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getTipsy(), 2400, 1), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getIntoxication(), 1800, 0), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getSweetHeart(), 2400, 1), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 2400, 4), 1F)
+		.build();
+	public static final FoodProperties ROSE_MOON = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getTipsy(), 3600, 2), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getIntoxication(), 3000, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 1800, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 1800, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 1800, 0), 1F)
+		.build();
+	public static final FoodProperties REANIMATORS_GARDEN = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getTipsy(), 3600, 2), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getIntoxication(), 2400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getSweetHeart(), 2400, 4), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 2400, 3), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 2), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 2), 1F)
+		.build();
+	public static final FoodProperties HEAVENS_CREAM = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.effect(() -> new MobEffectInstance(CompatEffects.getTipsy(), 3600, 2), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getIntoxication(), 2400, 0), 1F)
+		.effect(() -> new MobEffectInstance(CompatEffects.getSweetHeart(), 2400, 2), 1F)
+		.effect(() -> new MobEffectInstance(CREffects.REBOUND.getDelegate(), 2400, 4), 1F)
+		.build();
+
+	public static final FoodProperties TIGER_PRAWN = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F)
+		.effect(() -> new MobEffectInstance(MobEffects.HUNGER, 600, 0), 0.75F).build();
+	public static final FoodProperties COOKED_TIGER_PRAWN = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.6F).build();
+	public static final FoodProperties PRAWN_ROLL = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.6F).build();
+	public static final FoodProperties SALMON_WRAPPED_PRAWN = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(0.9F).build();
+	public static final FoodProperties PRAWN_PO_BOY = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.85F).build();
+	public static final FoodProperties PRAWN_STEW = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties PRAWN_STEW_CUP = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.4F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1800, 0), 1F).build();
+	public static final FoodProperties PRAWN_CEVICHE = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties PRAWN_NOODLES = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.9F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties UNI = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.6F).build();
+	public static final FoodProperties UNI_ROLL = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.6F).build();
+	public static final FoodProperties PLATINUM_BASS = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.1F).build();
+	public static final FoodProperties COOKED_PLATINUM_BASS = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.85F).build();
+	public static final FoodProperties PLATINUM_BASS_HEAD = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F).build();
+	public static final FoodProperties COOKED_PLATINUM_BASS_HEAD = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.85F).build();
+	public static final FoodProperties PLATINUM_BASS_SLICE = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.1F).build();
+	public static final FoodProperties COOKED_PLATINUM_BASS_SLICE = (new FoodProperties.Builder())
+		.nutrition(4).saturationModifier(0.85F).build();
+	public static final FoodProperties PLATINUM_BASS_STEW = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties PLATINUM_BASS_STEW_CUP = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.5F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1800, 0), 1F).build();
+	public static final FoodProperties FISH_MIX = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.85F).build();
+	public static final FoodProperties CHIEFTAIN_CLAW = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.5F).build();
+	public static final FoodProperties CHIEFTAIN_LEG = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.75F).build();
+	public static final FoodProperties CHIEFTAIN_CRAB_MEAT = (new FoodProperties.Builder())
+		.nutrition(2).saturationModifier(0.5F).build();
+	public static final FoodProperties CRAB_MISO = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(1F).build();
+	public static final FoodProperties CRAB_NOODLES = (new FoodProperties.Builder())
+		.nutrition(13).saturationModifier(0.75F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties CRAB_LASAGNA = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(CREffects.CORROSION.getDelegate(), 400, 1), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 0), 1F).build();
+	public static final FoodProperties BUTTERED_LEGS = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.9F).build();
+	public static final FoodProperties BIG_RICE_BALL = (new FoodProperties.Builder())
+		.nutrition(9).saturationModifier(0.9F).build();
+	public static final FoodProperties LAND_AND_SEA_BURGER = (new FoodProperties.Builder())
+		.nutrition(12).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 3600, 0), 1F)
+		.effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 0), 1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 0), 1F).build();
+	public static final FoodProperties CLAM_MEAT = (new FoodProperties.Builder())
+		.nutrition(3).saturationModifier(0.3F).build();
+	public static final FoodProperties CLAM_ROLL = (new FoodProperties.Builder())
+		.nutrition(7).saturationModifier(0.5F).build();
+	public static final FoodProperties CLAM_CHOWDER = (new FoodProperties.Builder())
+		.nutrition(8).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(ModEffects.COMFORT, 3600, 0), 1F).build();
+	public static final FoodProperties CLAM_PASTA = (new FoodProperties.Builder())
+		.nutrition(11).saturationModifier(0.85F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties CLAM_MEATBALL_STEW = (new FoodProperties.Builder())
+		.nutrition(10).saturationModifier(0.8F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 3600, 0), 1F).build();
+	public static final FoodProperties CLAM_MEATBALL_STEW_CUP = (new FoodProperties.Builder())
+		.nutrition(5).saturationModifier(0.4F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 1800, 0), 1F).build();
+	public static final FoodProperties SEA_WRAP = (new FoodProperties.Builder())
+		.nutrition(14).saturationModifier(1F)
+		.effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT, 6000, 0), 1F).build();
+	public static final FoodProperties SHIMMERING_APPLE = (new FoodProperties.Builder())
+		.alwaysEdible()
+		.nutrition(8).saturationModifier(1.25F).build();
+
+	// Gummies
+	public static final FoodProperties STRAWBERRY_GUMMY = GUMMY(() ->
+		new MobEffectInstance(MobEffects.HEAL, 1, 2));
+	public static final FoodProperties LIME_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CREffects.CORROSION.getDelegate(), 200, 2));
+	public static final FoodProperties POMEGRANATE_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CREffects.VOLATILITY.getDelegate(), 200, 2));
+	public static final FoodProperties PINK_DRAGON_FRUIT_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(CREffects.SURGE.getDelegate(), 600, SurgeEffect.MAX_SURGE), () ->
+		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 0)));
+	public static final FoodProperties LUCUMA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CREffects.REBOUND.getDelegate(), 600, 2));
+	public static final FoodProperties MELON_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(MobEffects.HEAL, 1, 0), () ->
+		new MobEffectInstance(MobEffects.ABSORPTION, 200, 0)));
+	public static final FoodProperties APPLE_GUMMY = GUMMY(() ->
+		new MobEffectInstance(
+			CompatEffects.getExuberant(),
+			Modid.COS.loaded() ? 800 : 1800,
+			Modid.COS.loaded() ? 3 : 0
+		));
+	public static final FoodProperties GLOW_BERRY_GUMMY = GUMMY(() ->
+		new MobEffectInstance(
+			CompatEffects.getTracer(),
+			600,
+			Modid.COS.loaded() ? 2 : 0
+		));
+	public static final FoodProperties CARROT_GUMMY = GUMMY(() ->
+		new MobEffectInstance(MobEffects.NIGHT_VISION, 1200, 0));
+	public static final FoodProperties BANANA_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(NeapolitanCompat.getAgility(), 200, 0), () ->
+		new MobEffectInstance(MobEffects.JUMP, 200, 2)));
+	public static final FoodProperties VANILLA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(NeapolitanCompat.getVanillaScent(), 400, 0));
+	public static final FoodProperties CHOCOLATE_GUMMY = GUMMY(() ->
+		new MobEffectInstance(NeapolitanCompat.getSugarRush(), 200, 4));
+	public static final FoodProperties MINT_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(NeapolitanCompat.getBerserking(), 800, 0), () ->
+		new MobEffectInstance(MobEffects.DAMAGE_BOOST, 800, 0)));
+	public static final FoodProperties ADZUKI_GUMMY = GUMMY(() ->
+		new MobEffectInstance(NeapolitanCompat.getHarmony(), 40, 2));
+	public static final FoodProperties BULLET_PEPPER_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(MNDCompat.getBeneficialPungent(), 600, 3), () ->
+		new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0)));
+	public static final FoodProperties WILD_BERRY_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getFrostResistance(), 100, 2));
+	public static final FoodProperties PUMPKIN_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(CompatEffects.getStuffed(), 600, 0), () ->
+		new MobEffectInstance(MobEffects.SATURATION, 200, 0)));
+	public static final FoodProperties SWEET_BERRY_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getThornResistance(), 1200, 0));
+	public static final FoodProperties BEETROOT_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getRooted(), 1200, 0));
+	public static final FoodProperties ALOE_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getRelief(), 200, 3));
+	public static final FoodProperties PASSION_FRUIT_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getSpitting(), 40, 3));
+	public static final FoodProperties YUCCA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getPersistence(), 200, 3));
+	public static final FoodProperties GREEN_TEA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getVitality(), 200, 2));
+	public static final FoodProperties YELLOW_TEA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getTenacity(), 200, 2));
+	public static final FoodProperties BLACK_TEA_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getMaturity(), 200, 2));
+	public static final FoodProperties COFFEE_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getCaffeinated(), 400, 2));
+	public static final FoodProperties PRICKLY_PEAR_GUMMY = GUMMY(List.of(() ->
+		new MobEffectInstance(CompatEffects.getSpite(), 1800, 0), () ->
+		new MobEffectInstance(MobEffects.REGENERATION, 400, 0)));
+	public static final FoodProperties PEANUT_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getToughness(), 400, 1));
+	public static final FoodProperties ASPARAGUS_ASPIC = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getReach(), 200, 3));
+	public static final FoodProperties HEMP_GUMMY = GUMMY(() ->
+		new MobEffectInstance(CompatEffects.getPeace(), 1200, 4));
+
+	private static FoodProperties.Builder GUMMY() {
+		return new FoodProperties.Builder()
+			.alwaysEdible()
+			.nutrition(2)
+			.saturationModifier(0F);
+	}
+
+	private static FoodProperties GUMMY(@NotNull List<Supplier<MobEffectInstance>> effects) {
+		final FoodProperties.Builder builder = GUMMY();
+		effects.forEach(effect -> builder.effect(effect, 1F));
+		return builder.build();
+	}
+
+	private static FoodProperties GUMMY(@NotNull Supplier<MobEffectInstance> effect) {
+		return GUMMY(Collections.singletonList(effect));
+	}
+}

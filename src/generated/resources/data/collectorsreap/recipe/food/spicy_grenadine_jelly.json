@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "spicy_grenadine_jelly"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "collectorsreap:hot_nether_fruits"
+      }
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "collectorsreap:hot_nether_fruits"
+    },
+    {
+      "tag": "collectorsreap:hot_nether_fruits"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "tag": "c:fruits/pomegranate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:spicy_grenadine_jelly"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_popsicle"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ice_cubes"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "tag": "c:fruits/lime"
+    },
+    "i": {
+      "tag": "c:ice_cubes"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " cc",
+    "icc",
+    "si "
+  ],
+  "result": {
+    "id": "collectorsreap:lime_popsicle"
+  },
+  "show_notification": true
+}

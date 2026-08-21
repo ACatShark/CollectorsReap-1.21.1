@@ -1,0 +1,6 @@
+﻿{
+  "type": "neoforge:add_features",
+  "biomes": "#collectorsreap:has_spawn/lime",
+  "features": "collectorsreap:patch_lime_bush",
+  "step": "vegetal_decoration"
+}

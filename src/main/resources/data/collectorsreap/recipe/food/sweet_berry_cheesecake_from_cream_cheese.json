@@ -1,0 +1,41 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "cream_cheese"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "group":  "fd_sweet_berry_cheesecake",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "item":  "minecraft:sweet_berries"
+                        },
+                        {
+                            "tag":  "c:cheese/mild/cream"
+                        },
+                        {
+                            "item":  "farmersdelight:pie_crust"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:sweet_berry_cheesecake"
+               },
+    "show_notification":  true
+}

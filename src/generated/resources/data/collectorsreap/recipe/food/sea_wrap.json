@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "sea_wrap"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:tortilla"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/bread"
+    },
+    {
+      "item": "collectorsreap:chieftain_claw"
+    },
+    {
+      "tag": "c:raw_clam"
+    },
+    {
+      "tag": "c:cooked_prawn"
+    },
+    {
+      "item": "farmersdelight:cooked_cod_slice"
+    },
+    {
+      "item": "farmersdelight:cooked_salmon_slice"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "farmersdelight:cooked_rice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:sea_wrap"
+  }
+}

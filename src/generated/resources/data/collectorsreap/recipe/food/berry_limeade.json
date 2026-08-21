@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "berry_limeade"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:limeade"
+    },
+    {
+      "tag": "c:foods/berries"
+    },
+    {
+      "tag": "c:foods/berries"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:berry_limeade"
+  }
+}

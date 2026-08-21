@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pearly_claw"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": {
+      "item": "collectorsreap:chieftain_claw"
+    },
+    "h": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "p": {
+      "item": "collectorsreap:lunar_pearl"
+    }
+  },
+  "pattern": [
+    " p ",
+    "pcp",
+    " h "
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:pearly_claw"
+  }
+}

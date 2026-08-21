@@ -1,0 +1,28 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "carrot_gummy"
+                                }
+                            ],
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  1.0,
+    "ingredients":  [
+                        {
+                            "tag":  "c:vegetables/carrot"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_bottle"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:carrot_gummy"
+               }
+}

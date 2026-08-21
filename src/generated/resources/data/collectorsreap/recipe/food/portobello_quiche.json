@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_quiche"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "tag": "c:cheese"
+    },
+    "e": {
+      "tag": "c:eggs"
+    },
+    "m": {
+      "tag": "c:drinks/milk"
+    },
+    "o": {
+      "tag": "c:crops/onion"
+    },
+    "p": {
+      "tag": "c:mushrooms/portobello"
+    },
+    "r": {
+      "item": "farmersdelight:pie_crust"
+    }
+  },
+  "pattern": [
+    "pop",
+    "mcm",
+    "ere"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:portobello_quiche"
+  }
+}

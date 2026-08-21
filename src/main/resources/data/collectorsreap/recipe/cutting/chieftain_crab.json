@@ -1,0 +1,23 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "chieftain_crab"
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:chieftain_crab"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:chieftain_claw" } },
+                   { "item": { "id": "collectorsreap:chieftain_leg", "count": 4 } },
+                   { "item": { "id": "collectorsreap:chieftain_crab_meat", "count": 2 } },
+                   { "item": { "id": "collectorsreap:crab_miso" } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "strawberry_jam_bun"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:foods/strawberry"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:item_exists",
+        "item": "sob:strawberry_jam"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/dough"
+    },
+    {
+      "tag": "c:drinks/milk"
+    },
+    {
+      "tag": "c:fruits/lime"
+    },
+    {
+      "tag": "c:foods/strawberry"
+    },
+    {
+      "tag": "c:foods/strawberry"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:strawberry_jam_bun"
+  }
+}

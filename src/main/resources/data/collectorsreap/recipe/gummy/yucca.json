@@ -1,0 +1,44 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "yucca_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "atmospheric:yucca_fruit"
+                                                                 }
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "atmospheric"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  1.0,
+    "ingredients":  [
+                        {
+                            "tag":  "atmospheric:yucca_fruit"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_bottle"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:yucca_gummy"
+               }
+}

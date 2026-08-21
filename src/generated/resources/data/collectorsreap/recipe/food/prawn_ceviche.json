@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "prawn_ceviche"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:cooked_prawn"
+    },
+    {
+      "item": "collectorsreap:lime_slice"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:prawn_ceviche"
+  }
+}

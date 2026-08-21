@@ -1,0 +1,47 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "sunny_ice_cream"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "neapolitan"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:item_exists",
+                                                       "item":  "neapolitan:vanilla_ice_cream"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "c:foods/strawberry"
+                                                                 }
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "ingredients":  [
+                        {
+                            "item":  "neapolitan:vanilla_ice_cream"
+                        },
+                        {
+                            "tag":  "c:fruits/lucuma"
+                        },
+                        {
+                            "tag":  "c:foods/strawberry"
+                        },
+                        {
+                            "item":  "minecraft:bowl"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:sunny_ice_cream"
+               }
+}

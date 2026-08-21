@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_dart"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:nuggets/copper"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:urchin_dart"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_urchin_needle": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:urchin_needle"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_urchin_needle"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:urchin_dart"
+    ]
+  }
+}

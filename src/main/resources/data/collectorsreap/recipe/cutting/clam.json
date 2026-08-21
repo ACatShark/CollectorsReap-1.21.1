@@ -1,0 +1,37 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "clam"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "clam_meat"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:clam"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:clam_meat", "count": 2 } },
+                   {
+                       "chance":  0.5,
+                       "id":  "collectorsreap:clam_meat"
+                   },
+                   {
+                       "chance":  0.1,
+                       "id":  "collectorsreap:lunar_pearl"
+                   }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

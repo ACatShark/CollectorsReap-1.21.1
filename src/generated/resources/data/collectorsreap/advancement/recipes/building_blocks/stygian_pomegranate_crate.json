@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate_crate"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stygian_pomegranate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:stygian_pomegranate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:stygian_pomegranate_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stygian_pomegranate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:stygian_pomegranate_crate"
+    ]
+  }
+}

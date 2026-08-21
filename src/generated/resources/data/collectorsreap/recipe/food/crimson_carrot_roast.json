@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "crimson_carrot_roast"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "tag": "c:fruits/pomegranate"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:warped_roots"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:crimson_carrot_roast"
+  }
+}

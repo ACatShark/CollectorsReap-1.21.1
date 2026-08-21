@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lucuma"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lucuma_planks"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma_sign"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:lucuma_planks" } }
+               ],
+    "tool":  {
+                 "type":  "farmersdelight:tool_action",
+                 "action":  "axe_dig"
+             }
+}

@@ -1,0 +1,44 @@
+﻿{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:pizza"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:flaxen_cheese_wedge"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "f": {
+            "item": "brewinandchewin:flaxen_cheese_wedge"
+          },
+          "p": {
+            "tag": "brewinandchewin:pizza_toppings"
+          },
+          "t": {
+            "item": "farmersdelight:tomato_sauce"
+          },
+          "w": {
+            "tag": "c:grain/wheat"
+          }
+        },
+        "pattern": [
+          " f ",
+          "ptp",
+          "www"
+        ],
+        "result": {
+          "item": "brewinandchewin:pizza"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

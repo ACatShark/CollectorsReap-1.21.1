@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "shimmering_apple"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:golden_apple"
+    },
+    "p": {
+      "item": "collectorsreap:lunar_pearl"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "pap",
+    "ppp"
+  ],
+  "result": {
+    "count": 2,
+    "id": "collectorsreap:shimmering_apple"
+  }
+}

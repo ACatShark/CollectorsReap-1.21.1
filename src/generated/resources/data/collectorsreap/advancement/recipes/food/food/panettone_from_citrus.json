@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:nuts"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_citrus": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:fruits/citrus"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/panettone_from_citrus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_citrus"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/panettone_from_citrus"
+    ]
+  }
+}

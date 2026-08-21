@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "platinum_bass_stew"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "collectorsreap:platinum_bass_head"
+    },
+    {
+      "item": "collectorsreap:platinum_bass_slice"
+    },
+    {
+      "tag": "c:crops/rice"
+    },
+    {
+      "item": "collectorsreap:lime_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:platinum_bass_stew"
+  }
+}

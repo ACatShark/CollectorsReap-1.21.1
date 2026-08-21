@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone_slice"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_panettone_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:panettone_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/panettone_from_slices"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_panettone_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/panettone_from_slices"
+    ]
+  }
+}

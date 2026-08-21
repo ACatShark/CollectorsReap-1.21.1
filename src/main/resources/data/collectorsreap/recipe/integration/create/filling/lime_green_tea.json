@@ -1,0 +1,46 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lime_green_tea"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:not",
+                                                       "value":  {
+                                                                     "type":  "neoforge:tag_empty",
+                                                                     "tag":  "c:tea_leaves/green"
+                                                                 }
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "farmersrespite"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "create"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "create:filling",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:glass_bottle"
+                        },
+                        {
+                            "amount":  250,
+                            "fluid":  "collectorsreap:lime_green_tea",
+                            "nbt":  {
+
+                                    }
+                        }
+                    ],
+    "results":  [
+                    {
+                        "item":  "collectorsreap:lime_green_tea"
+                    }
+                ]
+}

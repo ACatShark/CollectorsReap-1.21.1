@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_dart"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:nuggets/copper"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "c": {
+      "tag": "c:nuggets/copper"
+    },
+    "f": {
+      "tag": "c:feathers"
+    },
+    "n": {
+      "item": "collectorsreap:urchin_needle"
+    }
+  },
+  "pattern": [
+    "n",
+    "c",
+    "f"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:urchin_dart"
+  }
+}

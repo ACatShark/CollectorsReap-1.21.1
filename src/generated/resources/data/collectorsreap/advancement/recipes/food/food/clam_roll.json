@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "clam_roll"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_claw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:raw_clam"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/clam_roll"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_claw"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/clam_roll"
+    ]
+  }
+}

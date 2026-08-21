@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "neapolitan:chocolate_bar"
+      }
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "chocolate_cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cream_cheese"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/dough"
+    },
+    {
+      "tag": "c:cheese/mild/cream"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "neapolitan:chocolate_bar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:chocolate_cannoli"
+  }
+}

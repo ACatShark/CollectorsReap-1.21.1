@@ -1,0 +1,31 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "urchin"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "uni"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:urchin"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:uni", "count": 2 } },
+                   { "item": { "id": "collectorsreap:urchin_test" } },
+                   { "item": { "id": "collectorsreap:urchin_needle", "count": 6 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

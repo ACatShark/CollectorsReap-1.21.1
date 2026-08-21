@@ -1,0 +1,44 @@
+﻿{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "neapolitan:strawberry_banana_smoothie"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:ice_cubes"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:foods/strawberry"
+          },
+          {
+            "tag": "c:foods/strawberry"
+          },
+          {
+            "tag": "c:foods/banana"
+          },
+          {
+            "tag": "c:ice_cubes"
+          },
+          {
+            "item": "minecraft:glass_bottle"
+          }
+        ],
+        "result": {
+          "item": "neapolitan:strawberry_banana_smoothie"
+        }
+      }
+    }
+  ]
+}

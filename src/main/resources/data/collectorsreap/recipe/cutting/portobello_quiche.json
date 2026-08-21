@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "portobello"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "portobello_quiche"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:portobello_quiche"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:portobello_quiche_slice", "count": 4 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test_block"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:urchin_test_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "collectorsreap:urchin_test"
+  }
+}

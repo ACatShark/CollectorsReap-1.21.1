@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "collectorsreap:pink_dragon_fruit"
+  },
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:dried_pink_dragon_fruit"
+  }
+}

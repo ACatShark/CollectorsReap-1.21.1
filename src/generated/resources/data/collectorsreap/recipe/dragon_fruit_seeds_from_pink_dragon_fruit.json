@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "dragon_fruit_seeds"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:dragon_fruit_seeds"
+  }
+}

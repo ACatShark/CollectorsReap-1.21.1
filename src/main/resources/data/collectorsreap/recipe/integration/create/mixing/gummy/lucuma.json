@@ -1,0 +1,38 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma_gummy"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "create"
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:lucuma_gummy"
+                    }
+                ]
+}

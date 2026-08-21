@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma_planks"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "collectorsreap:lucuma_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "collectorsreap:lucuma_planks"
+  }
+}

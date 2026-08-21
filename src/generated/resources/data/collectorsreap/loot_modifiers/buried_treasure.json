@@ -1,0 +1,14 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "lunar_pearl"
+    }
+  ],
+  "item": "collectorsreap:lunar_pearl",
+  "loot_table": "minecraft:chests/buried_treasure",
+  "maxAmount": 7,
+  "minAmount": 2
+}

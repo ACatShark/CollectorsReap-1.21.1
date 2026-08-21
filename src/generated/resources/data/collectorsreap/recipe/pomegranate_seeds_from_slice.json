@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate_slice"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate_seeds"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:pomegranate_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:pomegranate_seeds"
+  }
+}

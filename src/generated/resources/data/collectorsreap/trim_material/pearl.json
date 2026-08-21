@@ -1,0 +1,9 @@
+{
+  "asset_name": "collectorsreap_pearl",
+  "description": {
+    "color": "#EFCBEC",
+    "translate": "trim_material.collectorsreap.pearl"
+  },
+  "ingredient": "collectorsreap:lunar_pearl",
+  "item_model_index": -1.0
+}

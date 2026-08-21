@@ -1,0 +1,23 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "urchin_test"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "chiseled_urchin_test_bricks"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "minecraft:stonecutting",
+    "count":  1,
+    "ingredient":  {
+                       "item":  "collectorsreap:urchin_test_bricks"
+                   },
+    "result":  "collectorsreap:chiseled_urchin_test_bricks"
+}

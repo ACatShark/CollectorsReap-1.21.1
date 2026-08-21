@@ -1,0 +1,14 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "moontear_seeds"
+    }
+  ],
+  "item": "collectorsreap:moontear_seeds",
+  "loot_table": "minecraft:gameplay/sniffer_digging",
+  "maxAmount": 1,
+  "minAmount": 1
+}

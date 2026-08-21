@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma_cake"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma_cake_slice"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lucuma_cake_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:lucuma_cake_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/lucuma_cake_from_slices"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lucuma_cake_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/lucuma_cake_from_slices"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+// 1.21.1	2026-08-19T03:35:57.4674529	Tags for minecraft:entity_type mod id collectorsreap
+ddd907b6cb1b03c93f42247088b1f1fa5a81084f data/collectorsreap/tags/entity_type/involatile.json
+01c3f5cebabec10bf259b13ce1d6ce40be8bda20 data/collectorsreap/tags/entity_type/volatility_immune.json
+cc85023075ea714ad81b0001edc14edeb2203f97 data/letfishlove/tags/entity_type/breedable_fish.json

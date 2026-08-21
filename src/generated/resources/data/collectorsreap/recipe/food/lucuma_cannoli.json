@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma_cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cream_cheese"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:foods/dough"
+    },
+    {
+      "tag": "c:cheese/mild/cream"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "tag": "c:fruits/lucuma"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:lucuma_cannoli"
+  }
+}

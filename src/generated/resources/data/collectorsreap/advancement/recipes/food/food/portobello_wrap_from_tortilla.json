@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_wrap"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:tortilla"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_baked_portobello_cap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:baked_portobello_cap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/portobello_wrap_from_tortilla"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_baked_portobello_cap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/portobello_wrap_from_tortilla"
+    ]
+  }
+}

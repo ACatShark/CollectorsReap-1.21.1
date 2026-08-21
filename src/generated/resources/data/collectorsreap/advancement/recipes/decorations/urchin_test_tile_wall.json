@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test_tile_wall"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:urchin_test_tile_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_urchin_test_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:urchin_test_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_urchin_test_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:urchin_test_tile_wall"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_cake"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_cake_slice"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    },
+    {
+      "item": "collectorsreap:lime_cake_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:lime_cake"
+  }
+}

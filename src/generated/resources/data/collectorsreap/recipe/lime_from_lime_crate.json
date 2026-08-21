@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_crate"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "collectorsreap:lime_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "collectorsreap:lime"
+  }
+}

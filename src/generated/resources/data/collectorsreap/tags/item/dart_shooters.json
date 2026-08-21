@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:bamboo",
+    {
+      "id": "mynethersdelight:powder_cannon",
+      "required": false
+    }
+  ]
+}

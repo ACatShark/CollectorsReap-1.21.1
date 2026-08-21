@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "collectorsreap:portobello"
+  },
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:baked_portobello_cap"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "lime_seeds"
+    }
+  ],
+  "item": "collectorsreap:lime_seeds",
+  "loot_table": "minecraft:chests/simple_dungeon",
+  "maxAmount": 4,
+  "minAmount": 2
+}

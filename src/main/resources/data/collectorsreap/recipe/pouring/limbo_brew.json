@@ -1,0 +1,25 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersrespite"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "limbo_brew"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "pink_dragon_fruit"
+                                }
+                            ],
+    "type":  "farmersrespite:kettle_pouring",
+    "amount":  250,
+    "container":  {
+                      "item":  "minecraft:glass_bottle"
+                  },
+    "fluid":  "collectorsreap:limbo_brew",
+    "output":  {
+                   "id":  "collectorsreap:limbo_brew"
+               }
+}

@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_wrap"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:tortilla"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:tortilla"
+    },
+    {
+      "item": "collectorsreap:baked_portobello_cap"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    },
+    {
+      "tag": "c:crops/carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:portobello_wrap"
+  }
+}

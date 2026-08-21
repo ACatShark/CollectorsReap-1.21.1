@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate_ice_cream_block"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate_ice_cream"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "i": {
+      "item": "collectorsreap:pomegranate_ice_cream"
+    },
+    "s": {
+      "item": "minecraft:snow_block"
+    }
+  },
+  "pattern": [
+    "sss",
+    "sis",
+    "sss"
+  ],
+  "result": {
+    "count": 8,
+    "id": "collectorsreap:pomegranate_ice_cream_block"
+  }
+}

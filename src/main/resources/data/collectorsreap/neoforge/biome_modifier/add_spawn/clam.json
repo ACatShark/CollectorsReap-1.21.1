@@ -1,0 +1,10 @@
+﻿{
+  "type": "neoforge:add_spawns",
+  "biomes": "#collectorsreap:has_spawn/clam",
+  "spawners": {
+    "type": "collectorsreap:clam",
+    "maxCount": 1,
+    "minCount": 1,
+    "weight": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "land_and_sea_burger"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "some_assembly_required:burger_bun"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/bread"
+    },
+    {
+      "item": "collectorsreap:baked_portobello_cap"
+    },
+    {
+      "item": "collectorsreap:chieftain_claw"
+    },
+    {
+      "item": "farmersdelight:beef_patty"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:crops/onion"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:land_and_sea_burger"
+  }
+}

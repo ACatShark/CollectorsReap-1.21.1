@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "stygian_pomegranate_crate"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    },
+    {
+      "item": "collectorsreap:stygian_pomegranate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:stygian_pomegranate_crate"
+  }
+}

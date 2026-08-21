@@ -1,0 +1,10 @@
+{
+  "values": [
+    {
+      "id": "#farmersdelight:mushroom_colony_growable_on",
+      "required": false
+    },
+    "#minecraft:mushroom_grow_block",
+    "#minecraft:dirt"
+  ]
+}

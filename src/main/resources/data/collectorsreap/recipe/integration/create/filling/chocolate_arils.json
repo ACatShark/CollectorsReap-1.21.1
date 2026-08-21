@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "chocolate_arils"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "neapolitan"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "create"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "create:filling",
+    "ingredients":  [
+                        {
+                            "tag":  "c:seeds/pomegranate"
+                        },
+                        {
+                            "amount":  250,
+                            "fluid":  "create:chocolate",
+                            "nbt":  {
+
+                                    }
+                        }
+                    ],
+    "results":  [
+                    {
+                        "item":  "collectorsreap:chocolate_arils"
+                    }
+                ]
+}

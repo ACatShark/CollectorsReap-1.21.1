@@ -1,0 +1,35 @@
+﻿{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:item_exists",
+          "item": "brewinandchewin:ham_and_cheese_sandwich"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "category": "misc",
+        "ingredients": [
+          {
+            "tag": "c:bread"
+          },
+          {
+            "item": "farmersdelight:smoked_ham"
+          },
+          {
+            "tag": "c:cheese"
+          },
+          {
+            "tag": "c:bread"
+          }
+        ],
+        "result": {
+          "count": 2,
+          "item": "brewinandchewin:ham_and_cheese_sandwich"
+        }
+      }
+    }
+  ]
+}

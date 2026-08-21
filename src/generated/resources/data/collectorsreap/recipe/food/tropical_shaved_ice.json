@@ -1,0 +1,39 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "tropical_shaved_ice"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:foods/strawberry"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "c:foods/strawberry"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "tag": "c:ice_cubes"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:tropical_shaved_ice"
+  }
+}

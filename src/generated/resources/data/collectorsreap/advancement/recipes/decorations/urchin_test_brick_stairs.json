@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test_brick_stairs"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:urchin_test_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_urchin_test_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:urchin_test_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_urchin_test_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:urchin_test_brick_stairs"
+    ]
+  }
+}

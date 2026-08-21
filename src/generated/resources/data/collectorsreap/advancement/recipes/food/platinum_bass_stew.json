@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "platinum_bass_stew"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_platinum_bass_head": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:platinum_bass_head"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/platinum_bass_stew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_platinum_bass_head"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/platinum_bass_stew"
+    ]
+  }
+}

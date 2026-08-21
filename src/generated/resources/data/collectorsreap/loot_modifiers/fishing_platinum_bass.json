@@ -1,0 +1,20 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "biomes": "minecraft:river"
+      }
+    },
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "platinum_bass"
+    }
+  ],
+  "item": "collectorsreap:platinum_bass",
+  "loot_table": "minecraft:gameplay/fishing/fish",
+  "maxAmount": 1,
+  "minAmount": 1
+}

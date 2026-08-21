@@ -1,0 +1,38 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "create"
+                                },
+                                {
+                                    "type":  "neoforge:item_exists",
+                                    "item":  "mynethersdelight:bullet_pepper"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "bullet_pepper_gummy"
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "mynethersdelight:bullet_pepper"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:bullet_pepper_gummy"
+                    }
+                ]
+}

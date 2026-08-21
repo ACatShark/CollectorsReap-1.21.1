@@ -1,0 +1,34 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:item_exists",
+                                    "item":  "everycomp:dd/collectorsreap/short_lucuma_door"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "dramaticdoors"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "woodworks"
+                                },
+                                {
+                                    "type":  "woodworks:config",
+                                    "value":  "sawmill"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma_door"
+                                }
+                            ],
+    "type":  "woodworks:sawmill",
+    "ingredient":  {
+                       "item":  "collectorsreap:lucuma_door"
+                   },
+    "result":  "everycomp:dd/collectorsreap/short_lucuma_door",
+    "count":  2
+}

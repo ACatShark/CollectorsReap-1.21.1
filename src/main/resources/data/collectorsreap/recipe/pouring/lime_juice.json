@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lime"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lime_slice"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "limeade"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersrespite"
+                                }
+                            ],
+    "type":  "farmersrespite:kettle_pouring",
+    "amount":  250,
+    "container":  {
+                      "item":  "minecraft:glass_bottle"
+                  },
+    "fluid":  "collectorsreap:lime_juice",
+    "output":  {
+                   "id":  "collectorsreap:limeade"
+               }
+}

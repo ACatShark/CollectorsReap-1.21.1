@@ -1,0 +1,39 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lime_gummy"
+                                                   },
+                                                   {
+                                                       "type":  "neoforge:mod_loaded",
+                                                       "modid":  "create"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lime"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:lime_gummy"
+                    }
+                ]
+}

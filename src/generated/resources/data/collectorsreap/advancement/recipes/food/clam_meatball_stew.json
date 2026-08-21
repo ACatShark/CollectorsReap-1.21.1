@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "clam_meatball_stew"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clam_meat": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:clam_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/clam_meatball_stew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clam_meat"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/clam_meatball_stew"
+    ]
+  }
+}

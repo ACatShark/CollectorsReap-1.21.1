@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "straw_brush"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "tag": "c:gems/amethyst"
+    },
+    "r": {
+      "tag": "c:straw"
+    },
+    "s": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "r",
+    "a",
+    "s"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:straw_brush"
+  }
+}

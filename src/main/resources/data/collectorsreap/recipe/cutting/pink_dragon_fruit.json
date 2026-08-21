@@ -1,0 +1,21 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "pink_dragon_fruit"
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:pink_dragon_fruit"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:dragon_fruit_seeds" } },
+                   { "item": { "id": "minecraft:pink_dye" } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

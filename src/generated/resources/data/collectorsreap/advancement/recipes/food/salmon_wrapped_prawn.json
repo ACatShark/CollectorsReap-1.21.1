@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "salmon_wrapped_prawn"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_prawn": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:cooked_prawn"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/salmon_wrapped_prawn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_prawn"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/salmon_wrapped_prawn"
+    ]
+  }
+}

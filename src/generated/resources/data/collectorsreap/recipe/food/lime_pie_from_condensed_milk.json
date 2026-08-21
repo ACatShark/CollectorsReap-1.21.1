@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_pie"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:condensed_milk"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "farmersdelight:pie_crust"
+    },
+    "l": {
+      "item": "collectorsreap:lime_slice"
+    },
+    "m": {
+      "tag": "c:condensed_milk"
+    }
+  },
+  "pattern": [
+    "lll",
+    "lll",
+    "mcm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:lime_pie"
+  }
+}

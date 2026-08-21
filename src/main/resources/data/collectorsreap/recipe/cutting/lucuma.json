@@ -1,0 +1,21 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "minecraft:orange_dye" } },
+                   { "item": { "id": "minecraft:yellow_dye" } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

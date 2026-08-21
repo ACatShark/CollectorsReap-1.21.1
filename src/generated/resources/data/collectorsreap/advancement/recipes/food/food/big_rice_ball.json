@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "big_rice_ball"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_crab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:cooked_crab_meat"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/big_rice_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_crab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/big_rice_ball"
+    ]
+  }
+}

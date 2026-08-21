@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "mint_limeade"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "neapolitan:mint_leaves"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:limeade"
+    },
+    {
+      "tag": "neapolitan:mint_leaves"
+    },
+    {
+      "tag": "neapolitan:mint_leaves"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:mint_limeade"
+  }
+}

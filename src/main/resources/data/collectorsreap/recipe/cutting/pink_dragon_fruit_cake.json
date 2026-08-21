@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pink_dragon_fruit_cake"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pink_dragon_fruit_cake_slice"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:pink_dragon_fruit_cake"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:pink_dragon_fruit_cake_slice", "count": 7 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

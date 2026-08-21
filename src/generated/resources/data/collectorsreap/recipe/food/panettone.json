@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:cooked_nuts"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "tag": "c:foods/berries"
+    },
+    "c": {
+      "tag": "c:fruits/citrus"
+    },
+    "d": {
+      "tag": "c:foods/dough"
+    },
+    "m": {
+      "tag": "c:drinks/milk"
+    },
+    "n": {
+      "tag": "c:cooked_nuts"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "pattern": [
+    "bcn",
+    "bcn",
+    "mds"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:panettone"
+  }
+}

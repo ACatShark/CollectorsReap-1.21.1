@@ -1,0 +1,38 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "create"
+                                },
+                                {
+                                    "type":  "neoforge:item_exists",
+                                    "item":  "sob:roasted_peanuts"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "peanut_gummy"
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "sob:roasted_peanuts"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:peanut_gummy"
+                    }
+                ]
+}

@@ -1,0 +1,22 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "brewinandchewin"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "heavens_cream"
+                                }
+                            ],
+    "type":  "brewinandchewin:keg_pouring",
+    "fluid":  {
+                  "amount":  250,
+                  "id":  "collectorsreap:heavens_cream"
+              },
+    "output":  {
+                   "count":  1,
+                   "id":  "collectorsreap:heavens_cream"
+               },
+    "unit":  "millibuckets"
+}

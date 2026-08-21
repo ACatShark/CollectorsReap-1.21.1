@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "fish_mix"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:platinum_bass_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/fish_mix"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/fish_mix"
+    ]
+  }
+}

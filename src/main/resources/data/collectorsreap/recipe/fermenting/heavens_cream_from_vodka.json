@@ -1,0 +1,43 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "brewinandchewin"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "heavens_cream"
+                                }
+                            ],
+    "type":  "brewinandchewin:fermenting",
+    "base_fluid":  {
+                       "amount":  1000,
+                       "ingredient":  {
+                                          "tag":  "#brewinandchewin:vodka"
+                                      },
+                       "unit":  "millibuckets"
+                   },
+    "category":  "drinks",
+    "experience":  1.0,
+    "fermenting_time":  4800,
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma"
+                        },
+                        {
+                            "item":  "collectorsreap:lucuma"
+                        },
+                        {
+                            "item":  "minecraft:glow_berries"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        }
+                    ],
+    "result":  {
+                   "amount":  1000,
+                   "id":  "collectorsreap:heavens_cream"
+               },
+    "temperature":  1,
+    "unit":  "millibuckets"
+}

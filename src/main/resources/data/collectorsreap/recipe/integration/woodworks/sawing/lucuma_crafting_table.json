@@ -1,0 +1,34 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:item_exists",
+                                    "item":  "everycomp:vct/collectorsreap/lucuma_crafting_table"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "vct"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "woodworks"
+                                },
+                                {
+                                    "type":  "woodworks:config",
+                                    "value":  "sawmill"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma_planks"
+                                }
+                            ],
+    "type":  "woodworks:sawmill",
+    "ingredient":  {
+                       "tag":  "collectorsreap:lucuma_logs"
+                   },
+    "result":  "everycomp:vct/collectorsreap/lucuma_crafting_table",
+    "count":  1
+}

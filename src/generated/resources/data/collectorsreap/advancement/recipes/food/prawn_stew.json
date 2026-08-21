@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "prawn_stew"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cooked_prawn": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:cooked_prawn"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/prawn_stew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cooked_prawn"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/prawn_stew"
+    ]
+  }
+}

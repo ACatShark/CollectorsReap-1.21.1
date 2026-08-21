@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_seeds"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:lime"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:lime_seeds"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "panettone_slice"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:panettone_slice"
+    },
+    {
+      "item": "collectorsreap:panettone_slice"
+    },
+    {
+      "item": "collectorsreap:panettone_slice"
+    },
+    {
+      "item": "collectorsreap:panettone_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:panettone"
+  }
+}

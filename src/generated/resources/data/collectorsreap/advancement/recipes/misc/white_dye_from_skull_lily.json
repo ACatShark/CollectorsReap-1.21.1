@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "skull_lily"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_skull_lily": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:skull_lily"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:white_dye_from_skull_lily"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_skull_lily"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:white_dye_from_skull_lily"
+    ]
+  }
+}

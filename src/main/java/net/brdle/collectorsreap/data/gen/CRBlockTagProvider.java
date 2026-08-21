@@ -1,0 +1,234 @@
+package net.brdle.collectorsreap.data.gen;
+
+import com.teamabnormals.blueprint.core.other.tags.BlueprintBlockTags;
+import net.brdle.collectorsreap.CollectorsReap;
+import net.brdle.collectorsreap.Util;
+import net.brdle.collectorsreap.common.block.CRBlocks;
+import net.brdle.collectorsreap.common.block.EffectCandleCakeBlock;
+import net.brdle.collectorsreap.compat.Modid;
+import net.brdle.collectorsreap.data.CRBlockTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import vectorwing.farmersdelight.common.registry.ModBlocks;
+import vectorwing.farmersdelight.common.tag.CommonTags;
+import vectorwing.farmersdelight.common.tag.ModTags;
+import java.util.concurrent.CompletableFuture;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public class CRBlockTagProvider extends BlockTagsProvider {
+	public CRBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+		super(output, lookupProvider, CollectorsReap.MODID, existingFileHelper);
+	}
+
+	@Override
+	public void addTags(HolderLookup.@NotNull Provider provider) {
+		// Collector's Reap
+		this.tag(CRBlockTags.CROPS_PLANTABLE_ON)
+			.add(Blocks.FARMLAND)
+			.add(ModBlocks.RICH_SOIL_FARMLAND.get())
+			.addOptionalTag(Modid.GR.rl("farmlands"))
+			.addOptional(Modid.MND.rl("resurgent_soil_farmland"));
+		this.tag(CRBlockTags.PORTOBELLO_SPAWNABLE_ON)
+			.addOptionalTag(ModTags.Blocks.MUSHROOM_COLONY_GROWABLE_ON)
+			.addTag(BlockTags.MUSHROOM_GROW_BLOCK)
+			.addTag(BlockTags.DIRT);
+		this.tag(CRBlockTags.LIME_SPAWNABLE_ON)
+			.addTag(BlockTags.DIRT)
+			.addTag(CRBlockTags.CROPS_PLANTABLE_ON);
+		this.tag(CRBlockTags.DRAGON_FRUIT_SPAWNABLE_ON)
+			.addTag(Tags.Blocks.SANDS_RED);
+		this.tag(CRBlockTags.STYGIAN_POMEGRANATE_GROWABLE_ON)
+			.addOptional(Modid.MND.rl("resurgent_soil"))
+			.addOptional(Modid.MND.rl("resurgent_soil_farmland"))
+			.addOptional(Modid.ND.rl("rich_soul_soil"));
+		this.tag(CRBlockTags.POMEGRANATE_FAST_ON)
+			.addTag(CRBlockTags.STYGIAN_POMEGRANATE_GROWABLE_ON)
+			.addTag(BlockTags.NYLIUM);
+		this.tag(CRBlockTags.CRAB_SPAWNABLE_ON)
+			.addTag(BlockTags.SAND)
+			.addTag(Tags.Blocks.GRAVELS)
+			.add(Blocks.WATER)
+			.add(Blocks.CLAY)
+			.addOptionalTag(Modid.Q.rl("crab_spawnable"))
+			.addOptionalTag(Modid.CRAB.rl("crab_spawn_on"));
+		this.tag(CRBlockTags.LUCUMA_LOGS)
+			.add(CRBlocks.LUCUMA_LOG.get())
+			.add(CRBlocks.LUCUMA_WOOD.get())
+			.add(CRBlocks.STRIPPED_LUCUMA_LOG.get())
+			.add(CRBlocks.STRIPPED_LUCUMA_WOOD.get());
+		this.tag(CRBlockTags.LUCUMA_ROOTS_CAN_GROW_THROUGH)
+			.addTag(CRBlockTags.LUCUMA_LOGS)
+			.addTag(BlockTags.SNOW)
+			.add(Blocks.MUD)
+			.add(Blocks.VINE);
+
+		// Minecraft
+		CRBlocks.HELPER.getDeferredRegister().getEntries()
+			.stream()
+			.map(DeferredHolder::get)
+			.filter(b -> b instanceof EffectCandleCakeBlock)
+			.forEach(b -> this.tag(BlockTags.CANDLE_CAKES).add(b));
+		this.tag(BlockTags.LOGS_THAT_BURN).addTag(CRBlockTags.LUCUMA_LOGS);
+		this.tag(BlockTags.PLANKS).add(CRBlocks.LUCUMA_PLANKS.get());
+		this.tag(BlockTags.WOODEN_STAIRS).add(CRBlocks.LUCUMA_STAIRS.get());
+		this.tag(BlockTags.WOODEN_SLABS).add(CRBlocks.LUCUMA_SLAB.get());
+		this.tag(BlockTags.WOODEN_FENCES).add(CRBlocks.LUCUMA_FENCE.get());
+		this.tag(BlockTags.FENCE_GATES).add(CRBlocks.LUCUMA_FENCE_GATE.get());
+		this.tag(BlockTags.WOODEN_DOORS).add(CRBlocks.LUCUMA_DOOR.get());
+		this.tag(BlockTags.WOODEN_TRAPDOORS).add(CRBlocks.LUCUMA_TRAPDOOR.get());
+		this.tag(BlockTags.WOODEN_PRESSURE_PLATES).add(CRBlocks.LUCUMA_PRESSURE_PLATE.get());
+		this.tag(BlockTags.WOODEN_BUTTONS).add(CRBlocks.LUCUMA_BUTTON.get());
+		this.tag(BlockTags.STANDING_SIGNS).add(CRBlocks.LUCUMA_SIGN.get());
+		this.tag(BlockTags.WALL_SIGNS).add(CRBlocks.LUCUMA_WALL_SIGN.get());
+		this.tag(BlockTags.CEILING_HANGING_SIGNS).add(CRBlocks.LUCUMA_HANGING_SIGN.get());
+		this.tag(BlockTags.WALL_HANGING_SIGNS).add(CRBlocks.LUCUMA_WALL_HANGING_SIGN.get());
+		this.tag(BlockTags.SAPLINGS).add(CRBlocks.LUCUMA_SAPLING.get());
+		this.tag(BlockTags.LEAVES).add(CRBlocks.LUCUMA_LEAVES.get());
+		this.tag(BlockTags.FLOWER_POTS)
+			.add(CRBlocks.POTTED_LUCUMA_SAPLING.get())
+			.add(CRBlocks.POTTED_DAMSELFLOWER.get())
+			.add(CRBlocks.POTTED_MOONTEAR.get())
+			.add(CRBlocks.POTTED_SKULL_LILY.get());
+		this.tag(BlockTags.SMALL_FLOWERS)
+			.add(CRBlocks.DRAGON_BUSH.get())
+			.add(CRBlocks.DAMSELFLOWER.get())
+			.add(CRBlocks.MOONTEAR.get())
+			.add(CRBlocks.SKULL_LILY.get());
+		this.tag(BlockTags.TALL_FLOWERS)
+			.add(CRBlocks.BULBOUS_ROSE.get())
+			.add(CRBlocks.HEARTPETALS.get());
+		this.tag(BlockTags.CROPS)
+			.add(CRBlocks.BUDDING_PINK_DRAGON_FRUIT_CROP.get())
+			.add(CRBlocks.BULBOUS_ROSE_CROP.get())
+			.add(CRBlocks.HEARTPETALS_CROP.get());
+		this.tag(BlockTags.BEE_GROWABLES)
+			.add(CRBlocks.LIME_BUSH.get())
+			.add(CRBlocks.POMEGRANATE_BUSH.get())
+			.add(CRBlocks.BULBOUS_ROSE_CROP.get())
+			.add(CRBlocks.HEARTPETALS_CROP.get());
+		this.tag(BlockTags.MAINTAINS_FARMLAND)
+			.add(CRBlocks.DAMSELFLOWER.get())
+			.add(CRBlocks.DAMSELFLOWER_CROP.get())
+			.add(CRBlocks.MOONTEAR.get())
+			.add(CRBlocks.MOONTEAR_CROP.get())
+			.add(CRBlocks.SKULL_LILY.get())
+			.add(CRBlocks.SKULL_LILY_CROP.get())
+			.add(CRBlocks.BULBOUS_ROSE.get())
+			.add(CRBlocks.BULBOUS_ROSE_CROP.get())
+			.add(CRBlocks.HEARTPETALS.get())
+			.add(CRBlocks.HEARTPETALS_CROP.get());
+		this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+			.add(CRBlocks.LIME_ICE_CREAM_BLOCK.get())
+			.add(CRBlocks.POMEGRANATE_ICE_CREAM_BLOCK.get())
+			.add(CRBlocks.PINK_DRAGON_FRUIT_ICE_CREAM_BLOCK.get())
+			.add(CRBlocks.LUCUMA_ICE_CREAM_BLOCK.get())
+			.add(CRBlocks.PLATINUM_BASS_ROE.get())
+			.add(CRBlocks.TIGER_PRAWN_ROE.get());
+		this.tag(BlockTags.MINEABLE_WITH_AXE)
+			.add(CRBlocks.LUCUMA_CABINET.get())
+			.add(CRBlocks.PORTOBELLO.get())
+			.add(CRBlocks.LIME_CRATE.get())
+			.add(CRBlocks.POMEGRANATE_CRATE.get())
+			.add(CRBlocks.STYGIAN_POMEGRANATE_CRATE.get())
+			.add(CRBlocks.PINK_DRAGON_FRUIT_CRATE.get())
+			.add(CRBlocks.LUCUMA_CRATE.get())
+			.add(CRBlocks.GILDED_LUCUMA_CRATE.get());
+		this.tag(BlockTags.MINEABLE_WITH_HOE).add(CRBlocks.LUCUMA_LEAVES.get());
+		this.tag(BlockTags.CLIMBABLE).add(CRBlocks.PINK_DRAGON_FRUIT_CROP.get());
+		this.tag(BlockTags.WALLS)
+			.add(CRBlocks.URCHIN_TEST_BRICK_WALL.get())
+			.add(CRBlocks.URCHIN_TEST_TILE_WALL.get());
+		this.tag(BlockTags.SLABS)
+			.add(CRBlocks.URCHIN_TEST_BRICK_SLAB.get())
+			.add(CRBlocks.URCHIN_TEST_TILE_SLAB.get());
+		this.tag(BlockTags.STAIRS)
+			.add(CRBlocks.URCHIN_TEST_BRICK_STAIRS.get())
+			.add(CRBlocks.URCHIN_TEST_TILE_STAIRS.get());
+		this.tag(BlockTags.CAULDRONS)
+			.add(CRBlocks.LIME_MILKSHAKE_CAULDRON.get())
+			.add(CRBlocks.POMEGRANATE_MILKSHAKE_CAULDRON.get())
+			.add(CRBlocks.PINK_DRAGON_FRUIT_MILKSHAKE_CAULDRON.get())
+			.add(CRBlocks.LUCUMA_MILKSHAKE_CAULDRON.get());
+
+		// Forge
+		this.tag(Tags.Blocks.FENCE_GATES_WOODEN).add(CRBlocks.LUCUMA_FENCE_GATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_LIME).add(CRBlocks.LIME_CRATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_POMEGRANATE).add(CRBlocks.POMEGRANATE_CRATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_STYGIAN_POMEGRANATE).add(CRBlocks.STYGIAN_POMEGRANATE_CRATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_PINK_DRAGON_FRUIT).add(CRBlocks.PINK_DRAGON_FRUIT_CRATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_LUCUMA).add(CRBlocks.LUCUMA_CRATE.get());
+		this.tag(CRBlockTags.STORAGE_BLOCKS_GILDED_LUCUMA).add(CRBlocks.GILDED_LUCUMA_CRATE.get());
+		this.tag(Tags.Blocks.STORAGE_BLOCKS)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_LIME)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_POMEGRANATE)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_STYGIAN_POMEGRANATE)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_PINK_DRAGON_FRUIT)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_LUCUMA)
+			.addTag(CRBlockTags.STORAGE_BLOCKS_GILDED_LUCUMA);
+		this.tag(CommonTags.Blocks.MINEABLE_WITH_KNIFE)
+			.add(CRBlocks.PORTOBELLO_QUICHE.get())
+			.add(CRBlocks.LIME_PIE.get())
+			.add(CRBlocks.LIME_CAKE.get())
+			.add(CRBlocks.POMEGRANATE_CAKE.get())
+			.add(CRBlocks.PINK_DRAGON_FRUIT_CAKE.get())
+			.add(CRBlocks.LUCUMA_CAKE.get())
+			.add(CRBlocks.PANETTONE.get());
+
+		// Farmer's Delight
+		this.tag(ModTags.Blocks.COMPOST_ACTIVATORS)
+			.add(CRBlocks.PORTOBELLO.get())
+			.add(CRBlocks.PORTOBELLO_COLONY.get());
+		this.tag(ModTags.Blocks.UNAFFECTED_BY_RICH_SOIL)
+			.add(CRBlocks.PORTOBELLO_COLONY.get());
+		this.tag(ModTags.Blocks.WILD_CROPS)
+			.add(CRBlocks.DRAGON_BUSH.get());
+
+		// Blueprint
+		this.tag(BlueprintBlockTags.LEAF_PILES).add(CRBlocks.LUCUMA_LEAF_PILE.get());
+		this.tag(BlueprintBlockTags.WOODEN_BEEHIVES).add(CRBlocks.LUCUMA_BEEHIVE.get());
+		this.tag(BlueprintBlockTags.WOODEN_LADDERS).add(CRBlocks.LUCUMA_LADDER.get());
+		this.tag(BlueprintBlockTags.WOODEN_BOOKSHELVES).add(CRBlocks.LUCUMA_BOOKSHELF.get());
+		this.tag(BlueprintBlockTags.WOODEN_CHISELED_BOOKSHELVES).add(CRBlocks.CHISELED_LUCUMA_BOOKSHELF.get());
+		this.tag(BlueprintBlockTags.WOODEN_BOARDS).add(CRBlocks.LUCUMA_BOARDS.get());
+		this.tag(BlueprintBlockTags.WOODEN_CHESTS).add(CRBlocks.LUCUMA_CHEST.get());
+		this.tag(BlueprintBlockTags.WOODEN_TRAPPED_CHESTS).add(CRBlocks.TRAPPED_LUCUMA_CHEST.get());
+
+		// Serene Seasons
+		this.tag(CRBlockTags.WINTER_CROPS);
+		this.tag(CRBlockTags.AUTUMN_CROPS)
+			.add(CRBlocks.POMEGRANATE_BUSH.get());
+		this.tag(CRBlockTags.SUMMER_CROPS)
+			.add(CRBlocks.POMEGRANATE_BUSH.get())
+			.add(CRBlocks.BUDDING_PINK_DRAGON_FRUIT_CROP.get())
+			.add(CRBlocks.PINK_DRAGON_FRUIT_CROP.get());
+		this.tag(CRBlockTags.SPRING_CROPS)
+			.add(CRBlocks.LIME_BUSH.get());
+
+		// My Nether's Delight
+		this.tag(CRBlockTags.SHOWCASE_ACTIVATORS)
+			.add(CRBlocks.PORTOBELLO.get())
+			.add(CRBlocks.PORTOBELLO_COLONY.get());
+		this.tag(CRBlockTags.NOT_PROPAGATE_PLANT)
+			.add(CRBlocks.LIME_BUSH.get())
+			.add(CRBlocks.POMEGRANATE_BUSH.get());
+
+		// Let Fish Love
+		this.tag(CRBlockTags.FISH_ROE_PLATINUM_BASS).add(CRBlocks.PLATINUM_BASS_ROE.get());
+		this.tag(CRBlockTags.FISH_ROE_TIGER_PRAWN).add(CRBlocks.TIGER_PRAWN_ROE.get());
+
+		// Supplementaries
+		this.tag(CRBlockTags.HANG_FROM_ROPES).add(CRBlocks.PINK_DRAGON_FRUIT_CROP.get());
+
+		// Other
+		this.tag(Modid.TF.bt("portal/decoration")).add(CRBlocks.PORTOBELLO.get());
+		this.tag(Modid.IW.bt("small_mushrooms")).add(CRBlocks.PORTOBELLO.get());
+		this.tag(Modid.AUT.bt("snail_snacks")).add(CRBlocks.PORTOBELLO.get());
+	}
+}

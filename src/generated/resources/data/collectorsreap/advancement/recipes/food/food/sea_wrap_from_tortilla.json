@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "sea_wrap"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:tortilla"
+      }
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_claw": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:chieftain_claw"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/sea_wrap_from_tortilla"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_claw"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/sea_wrap_from_tortilla"
+    ]
+  }
+}

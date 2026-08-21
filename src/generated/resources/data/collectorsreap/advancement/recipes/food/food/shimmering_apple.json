@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "shimmering_apple"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lunar_pearl": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:lunar_pearl"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/shimmering_apple"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lunar_pearl"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/shimmering_apple"
+    ]
+  }
+}

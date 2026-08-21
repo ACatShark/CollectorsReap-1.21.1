@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_quiche"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_quiche_slice"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:portobello_quiche_slice"
+    },
+    {
+      "item": "collectorsreap:portobello_quiche_slice"
+    },
+    {
+      "item": "collectorsreap:portobello_quiche_slice"
+    },
+    {
+      "item": "collectorsreap:portobello_quiche_slice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:portobello_quiche"
+  }
+}

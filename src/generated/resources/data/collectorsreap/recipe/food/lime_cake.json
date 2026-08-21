@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_cake"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "e": {
+      "tag": "c:eggs"
+    },
+    "l": {
+      "tag": "c:fruits/lime"
+    },
+    "m": {
+      "tag": "c:drinks/milk"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    },
+    "w": {
+      "tag": "c:crops/wheat"
+    }
+  },
+  "pattern": [
+    "mlm",
+    "ses",
+    "wlw"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:lime_cake"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit_cake"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "e": {
+      "tag": "c:eggs"
+    },
+    "m": {
+      "tag": "c:drinks/milk"
+    },
+    "p": {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    },
+    "w": {
+      "tag": "c:crops/wheat"
+    }
+  },
+  "pattern": [
+    "mpm",
+    "ses",
+    "wpw"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:pink_dragon_fruit_cake"
+  }
+}

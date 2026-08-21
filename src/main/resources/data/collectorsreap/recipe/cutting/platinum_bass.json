@@ -1,0 +1,30 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "platinum_bass"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "platinum_bass_slice"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:platinum_bass"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:platinum_bass_slice", "count": 3 } },
+                   { "item": { "id": "collectorsreap:platinum_bass_head" } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

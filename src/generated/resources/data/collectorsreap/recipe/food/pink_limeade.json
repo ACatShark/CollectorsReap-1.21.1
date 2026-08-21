@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_limeade"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "collectorsreap:limeade"
+    },
+    {
+      "tag": "c:fruits/pomegranate"
+    },
+    {
+      "tag": "c:fruits/pomegranate"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:pink_limeade"
+  }
+}

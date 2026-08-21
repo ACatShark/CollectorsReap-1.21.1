@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#farmersdelight:tools/knives",
+    {
+      "id": "#nethersdelight:tools/knives",
+      "required": false
+    },
+    {
+      "id": "#mynethersdelight:tools/knives",
+      "required": false
+    }
+  ]
+}

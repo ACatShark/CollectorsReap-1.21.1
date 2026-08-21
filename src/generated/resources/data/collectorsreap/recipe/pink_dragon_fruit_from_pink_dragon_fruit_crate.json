@@ -1,0 +1,23 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit_crate"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "collectorsreap:pink_dragon_fruit_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "collectorsreap:pink_dragon_fruit"
+  }
+}

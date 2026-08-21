@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "chieftain_crab"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_crab_bucket": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:chieftain_crab_bucket"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/chieftain_crab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_crab_bucket"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/chieftain_crab"
+    ]
+  }
+}

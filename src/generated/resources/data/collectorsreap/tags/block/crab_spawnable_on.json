@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#minecraft:sand",
+    "#c:gravels",
+    "minecraft:water",
+    "minecraft:clay",
+    {
+      "id": "#quark:crab_spawnable",
+      "required": false
+    },
+    {
+      "id": "#crabbersdelight:crab_spawn_on",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+﻿{
+  "type": "neoforge:add_spawns",
+  "biomes": "#collectorsreap:has_spawn/chieftain_crab",
+  "spawners": {
+    "type": "collectorsreap:chieftain_crab",
+    "maxCount": 3,
+    "minCount": 1,
+    "weight": 5
+  }
+}

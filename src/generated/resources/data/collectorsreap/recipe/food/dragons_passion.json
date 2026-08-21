@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "dragons_passion"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "atmospheric"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "atmospheric:passion_fruit"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "tag": "atmospheric:passion_fruit"
+    },
+    [
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "minecraft:honey_bottle"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:dragons_passion"
+  }
+}

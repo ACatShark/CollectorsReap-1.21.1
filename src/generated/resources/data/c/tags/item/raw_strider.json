@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "mynethersdelight:strider_slice",
+      "required": false
+    },
+    {
+      "id": "mynethersdelight:minced_strider",
+      "required": false
+    },
+    {
+      "id": "nethersdelight:raw_strider",
+      "required": false
+    }
+  ]
+}

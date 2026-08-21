@@ -1,0 +1,14 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "gilded_lucuma"
+    }
+  ],
+  "item": "collectorsreap:gilded_lucuma",
+  "loot_table": "minecraft:chests/ancient_city",
+  "maxAmount": 1,
+  "minAmount": 1
+}

@@ -1,0 +1,157 @@
+package net.brdle.collectorsreap.data;
+
+import net.brdle.collectorsreap.CollectorsReap;
+import net.brdle.collectorsreap.Util;
+import net.brdle.collectorsreap.common.entity.CREntities;
+import net.brdle.collectorsreap.compat.Modid;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+
+public class CRItemTags {
+	// CR
+	public static final TagKey<Item> GUMMIES = cr("gummies");
+	public static final TagKey<Item> MOB_FEEDABLE_GUMMIES = cr("gummies/mob_feedable");
+	public static final TagKey<Item> CHIEFTAIN_CRAB_FOOD = cr("chieftain_crab_food");
+	public static final TagKey<Item> DART_SHOOTERS = cr("dart_shooters");
+	public static final TagKey<Item> HOT_NETHER_FRUITS = cr("hot_nether_fruits");
+	public static final TagKey<Item> LUCUMA_LOGS = cr("lucuma_logs");
+
+	// Forge
+	public static final TagKey<Item> ROE = forge("roe");
+	public static final TagKey<Item> FISH_ROE = forge("roe/fish");
+	public static final TagKey<Item> PRAWN_ROE = forge("roe/prawn");
+	public static final TagKey<Item> STORAGE_BLOCKS_LIME = forge("storage_blocks/lime");
+	public static final TagKey<Item> STORAGE_BLOCKS_POMEGRANATE = forge("storage_blocks/pomegranate");
+	public static final TagKey<Item> STORAGE_BLOCKS_STYGIAN_POMEGRANATE = forge("storage_blocks/stygian_pomegranate");
+	public static final TagKey<Item> STORAGE_BLOCKS_PINK_DRAGON_FRUIT = forge("storage_blocks/pink_dragon_fruit");
+	public static final TagKey<Item> STORAGE_BLOCKS_LUCUMA = forge("storage_blocks/lucuma");
+	public static final TagKey<Item> STORAGE_BLOCKS_GILDED_LUCUMA = forge("storage_blocks/gilded_lucuma");
+	public static final TagKey<Item> FRUITS = forge("fruits");
+	public static final TagKey<Item> FRUITS_CITRUS = forge("fruits/citrus");
+	public static final TagKey<Item> FRUITS_BANANA = forge("foods/banana");
+	public static final TagKey<Item> FRUITS_STRAWBERRY = forge("foods/strawberry");
+	public static final TagKey<Item> FRUITS_POMEGRANATE = forge("fruits/pomegranate");
+	public static final TagKey<Item> SEEDS_POMEGRANATE = forge("seeds/pomegranate");
+	public static final TagKey<Item> FRUITS_LIME = forge("fruits/lime");
+	public static final TagKey<Item> SEEDS_LIME = forge("seeds/lime");
+	public static final TagKey<Item> FRUITS_DRAGON_FRUIT = forge("fruits/dragon_fruit");
+	public static final TagKey<Item> SEEDS_DRAGON_FRUIT = forge("seeds/dragon_fruit");
+	public static final TagKey<Item> FRUITS_LUCUMA = forge("fruits/lucuma");
+	public static final TagKey<Item> VEGETABLES_BULLET_PEPPER = forge("vegetables/bullet_pepper");
+	public static final TagKey<Item> MUSHROOMS_PORTOBELLO = forge("mushrooms/portobello");
+	public static final TagKey<Item> COOKED_MUSHROOMS = forge("cooked_mushrooms");
+	public static final TagKey<Item> TORTILLA = forge("tortilla");
+	public static final TagKey<Item> ICE_CUBES = forge("ice_cubes");
+	public static final TagKey<Item> TEA_LEAVES_GREEN = forge("tea_leaves/green");
+	public static final TagKey<Item> TEA_LEAVES_YELLOW = forge("tea_leaves/yellow");
+	public static final TagKey<Item> TEA_LEAVES_BLACK = forge("tea_leaves/black");
+	public static final TagKey<Item> COFFEE_BEANS = forge("coffee_beans");
+	public static final TagKey<Item> RAW_CRAB_MEAT = forge("raw_crab_meat");
+	public static final TagKey<Item> COOKED_CRAB_MEAT = forge("cooked_crab_meat");
+	public static final TagKey<Item> CLAM = forge("clam");
+	public static final TagKey<Item> RAW_CLAM = forge("raw_clam");
+	public static final TagKey<Item> RAW_URCHIN = forge("raw_urchin");
+	public static final TagKey<Item> RAW_PRAWN = forge("raw_prawn");
+	public static final TagKey<Item> COOKED_PRAWN = forge("cooked_prawn");
+	public static final TagKey<Item> RAW_FISHES_PLATINUM_BASS = forge("raw_fishes/platinum_bass");
+	public static final TagKey<Item> COOKED_FISHES_PLATINUM_BASS = forge("cooked_fishes/platinum_bass");
+	public static final TagKey<Item> RAW_HOGLIN = forge("raw_hoglin");
+	public static final TagKey<Item> RAW_STRIDER = forge("raw_strider");
+	public static final TagKey<Item> COOKIES = forge("cookies");
+	public static final TagKey<Item> CHEESE = forge("cheese");
+	public static final TagKey<Item> CHEESE_MILD = forge("cheese/mild");
+	public static final TagKey<Item> CHEESE_MILD_CREAM = forge("cheese/mild/cream");
+	public static final TagKey<Item> CHEESE_SPICY = forge("cheese/spicy");
+	public static final TagKey<Item> CHEESE_SWEET = forge("cheese/sweet");
+	public static final TagKey<Item> CONDENSED_MILK = forge("condensed_milk");
+	public static final TagKey<Item> NUGGETS_COPPER = forge("nuggets/copper");
+	public static final TagKey<Item> JUICES = forge("juices");
+	public static final TagKey<Item> JUICES_LIME = forge("juices/lime");
+	public static final TagKey<Item> NUTS = forge("nuts");
+	public static final TagKey<Item> COOKED_NUTS = forge("cooked_nuts");
+	public static final TagKey<Item> ROPES = forge("ropes");
+	public static final TagKey<Item> STRAW = forge("straw");
+	public static final TagKey<Item> RAW_FISHES = forge("foods/raw_fish");
+	public static final TagKey<Item> COOKED_FISHES = forge("foods/cooked_fish");
+	public static final TagKey<Item> CABBAGE_ROLL_INGREDIENTS = cr("cabbage_roll_ingredients");
+
+	// Common c: tags (previously forge:)
+	public static final TagKey<Item> CROPS_RICE = forge("crops/rice");
+	public static final TagKey<Item> CROPS_WHEAT = forge("crops/wheat");
+	public static final TagKey<Item> CROPS_ONION = forge("crops/onion");
+	public static final TagKey<Item> CROPS_CARROT = forge("crops/carrot");
+	public static final TagKey<Item> CROPS_TOMATO = forge("crops/tomato");
+	public static final TagKey<Item> CROPS_BEETROOT = forge("crops/beetroot");
+	public static final TagKey<Item> CROPS_POTATO = forge("crops/potato");
+	public static final TagKey<Item> MILK = forge("drinks/milk");
+	public static final TagKey<Item> MILK_BOTTLE = forge("foods/milk_bottle");
+	public static final TagKey<Item> FOODS_PASTA = forge("foods/pasta");
+	public static final TagKey<Item> FOODS_DOUGH = forge("foods/dough");
+	public static final TagKey<Item> FOODS_BREAD = forge("foods/bread");
+	public static final TagKey<Item> FOODS_BERRIES = forge("foods/berries");
+	public static final TagKey<Item> FOODS_LEAFY_GREEN = forge("foods/leafy_green");
+	public static final TagKey<Item> FOODS_RAW_PORK = forge("foods/raw_pork");
+	public static final TagKey<Item> FOODS_RAW_CHICKEN = forge("foods/raw_chicken");
+	public static final TagKey<Item> FOODS_RAW_MUTTON = forge("foods/raw_mutton");
+	public static final TagKey<Item> FOODS_RAW_SALMON = forge("foods/raw_salmon");
+	public static final TagKey<Item> FOODS_RAW_COD = forge("foods/raw_cod");
+	public static final TagKey<Item> FOODS_COOKED_SALMON = forge("foods/cooked_salmon");
+	public static final TagKey<Item> FOODS_COOKED_COD = forge("foods/cooked_cod");
+	public static final TagKey<Item> EGGS = forge("eggs");
+	public static final TagKey<Item> TOOLS_KNIVES = forge("tools/knives");
+
+	// Diet
+	public static final TagKey<Item> DIET_FRUITS = Util.it("diet", "fruits");
+	public static final TagKey<Item> DIET_VEGETABLES = Util.it("diet", "vegetables");
+	public static final TagKey<Item> DIET_PROTEINS = Util.it("diet", "proteins");
+	public static final TagKey<Item> SPECIAL_FOOD = Util.it("diet", "special_food");
+
+	// Neapolitan
+	public static final TagKey<Item> ICE_CREAM = Util.it("neapolitan", "ice_cream");
+	public static final TagKey<Item> DRIED_VANILLA_PODS = Util.it("neapolitan", "dried_vanilla_pods");
+	public static final TagKey<Item> CHOCOLATE_BAR = Util.it("neapolitan", "chocolate_bar");
+	public static final TagKey<Item> MINT_LEAVES = Util.it("neapolitan", "mint_leaves");
+	public static final TagKey<Item> ROASTED_ADZUKI_BEANS = Util.it("neapolitan", "roasted_adzuki_beans");
+
+	// Brewin and Chewin
+	public static final TagKey<Item> FERMENTED_DRINKS = Util.it("brewinandchewin", "fermented_drinks");
+
+	// Atmospheric
+	public static final TagKey<Item> ALOE_LEAVES = Util.it("atmospheric", "aloe_leaves");
+	public static final TagKey<Item> PASSION_FRUIT = Util.it("atmospheric", "passion_fruit");
+	public static final TagKey<Item> YUCCA_FRUIT = Util.it("atmospheric", "yucca_fruit");
+	public static final TagKey<Item> COCHINEAL_FOOD = Util.it("atmospheric", "cochineal_food");
+
+	// Autumnity
+	public static final TagKey<Item> SNAIL_SNACKS = Util.it("autumnity", "snail_snacks");
+
+	// Seasonals
+	public static final TagKey<Item> PUMPKIN_PUREE = Util.it("seasonals", "pumpkin_puree");
+
+	// Serene Seasons
+	public static final TagKey<Item> WINTER_CROPS = Util.it("sereneseasons", "winter_crops");
+	public static final TagKey<Item> SUMMER_CROPS = Util.it("sereneseasons", "summer_crops");
+	public static final TagKey<Item> AUTUMN_CROPS = Util.it("sereneseasons", "autumn_crops");
+	public static final TagKey<Item> SPRING_CROPS = Util.it("sereneseasons", "spring_crops");
+
+	// SAS
+	public static final TagKey<Item> BURGER_BUN = Util.it("some_assembly_required", "burger_bun");
+
+	// Supplementaries
+	public static final TagKey<Item> FLOWER_BOX_PLANTABLE = Util.it("supplementaries", "flower_box_plantable");
+	public static final TagKey<Item> SUPP_COOKIES = Util.it("supplementaries", "cookies");
+
+	// Let Fish Love
+	public static final TagKey<Item> FISH_FOOD_PLATINUM_BASS = Util.it("letfishlove",
+		"fish_food/" + CollectorsReap.MODID + "/" + CREntities.PLATINUM_BASS.getId().getPath());
+	public static final TagKey<Item> FISH_FOOD_TIGER_PRAWN = Util.it("letfishlove",
+		"fish_food/" + CollectorsReap.MODID + "/" + CREntities.TIGER_PRAWN.getId().getPath());
+
+	private static TagKey<Item> cr(String name) {
+		return Modid.CR.it(name);
+	}
+
+	public static TagKey<Item> forge(String name) {
+		return Util.it("c", name);
+	}
+}

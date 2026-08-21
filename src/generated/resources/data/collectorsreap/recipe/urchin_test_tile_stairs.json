@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test_brick_stairs"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "x": {
+      "item": "collectorsreap:urchin_test_tiles"
+    }
+  },
+  "pattern": [
+    "x  ",
+    "xx ",
+    "xxx"
+  ],
+  "result": {
+    "count": 4,
+    "id": "collectorsreap:urchin_test_tile_stairs"
+  }
+}

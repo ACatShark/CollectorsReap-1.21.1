@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#c:cheese/mild",
+    "#c:cheese/spicy",
+    "#c:cheese/sweet",
+    {
+      "id": "#brewinandchewin:cheese_wedges",
+      "required": false
+    }
+  ]
+}

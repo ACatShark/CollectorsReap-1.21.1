@@ -1,0 +1,14 @@
+{
+  "type": "collectorsreap:add_item_to_table",
+  "chance": 1.0,
+  "conditions": [
+    {
+      "condition": "collectorsreap:enabled",
+      "item": "pomegranate_slice"
+    }
+  ],
+  "item": "collectorsreap:pomegranate_slice",
+  "loot_table": "minecraft:chests/bastion_other",
+  "maxAmount": 16,
+  "minAmount": 6
+}

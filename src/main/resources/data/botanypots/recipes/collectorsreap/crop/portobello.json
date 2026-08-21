@@ -1,0 +1,40 @@
+﻿{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botanypots"
+        },
+        {
+          "type": "collectorsreap:enabled",
+          "value": "portobello"
+        }
+      ],
+      "recipe": {
+        "type": "botanypots:crop",
+        "seed": {
+          "item": "collectorsreap:portobello"
+        },
+        "categories": [
+          "stone",
+          "mushroom",
+          "mulch"
+        ],
+        "growthTicks": 1200,
+        "display": {
+          "block": "collectorsreap:portobello"
+        },
+        "drops": [
+          {
+            "chance": 1.00,
+            "output": {
+              "item": "collectorsreap:portobello"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

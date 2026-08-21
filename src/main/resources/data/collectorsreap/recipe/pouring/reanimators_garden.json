@@ -1,0 +1,22 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "brewinandchewin"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "reanimators_garden"
+                                }
+                            ],
+    "type":  "brewinandchewin:keg_pouring",
+    "fluid":  {
+                  "amount":  250,
+                  "id":  "collectorsreap:reanimators_garden"
+              },
+    "output":  {
+                   "count":  1,
+                   "id":  "collectorsreap:reanimators_garden"
+               },
+    "unit":  "millibuckets"
+}

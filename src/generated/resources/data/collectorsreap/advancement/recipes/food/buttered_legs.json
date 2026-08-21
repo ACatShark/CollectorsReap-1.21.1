@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "buttered_legs"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chieftain_leg": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:chieftain_leg"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/buttered_legs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chieftain_leg"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/buttered_legs"
+    ]
+  }
+}

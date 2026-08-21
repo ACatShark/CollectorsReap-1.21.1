@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "gilded_lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "gilded_lucuma_crate"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "collectorsreap:gilded_lucuma_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "collectorsreap:gilded_lucuma"
+  }
+}

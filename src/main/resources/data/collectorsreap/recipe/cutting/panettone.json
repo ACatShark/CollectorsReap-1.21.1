@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "panettone"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "panettone_slice"
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:panettone"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:panettone_slice", "count": 4 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

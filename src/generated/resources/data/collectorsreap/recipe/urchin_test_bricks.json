@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "urchin_test_bricks"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "x": {
+      "item": "collectorsreap:urchin_test_block"
+    }
+  },
+  "pattern": [
+    "xx",
+    "xx"
+  ],
+  "result": {
+    "count": 4,
+    "id": "collectorsreap:urchin_test_bricks"
+  }
+}

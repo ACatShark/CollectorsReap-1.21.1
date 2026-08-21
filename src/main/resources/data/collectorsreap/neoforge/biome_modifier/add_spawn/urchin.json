@@ -1,0 +1,10 @@
+﻿{
+  "type": "neoforge:add_spawns",
+  "biomes": "#collectorsreap:has_spawn/urchin",
+  "spawners": {
+    "type": "collectorsreap:urchin",
+    "maxCount": 2,
+    "minCount": 1,
+    "weight": 1
+  }
+}

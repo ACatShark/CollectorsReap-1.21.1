@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime_slice"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "mediterranean_salmon"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_slice": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:lime_slice"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/mediterranean_salmon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_slice"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/mediterranean_salmon"
+    ]
+  }
+}

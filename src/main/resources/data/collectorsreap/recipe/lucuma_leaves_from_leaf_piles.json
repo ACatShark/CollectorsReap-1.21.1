@@ -1,0 +1,28 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma_leaf_pile"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "group":  "leaves",
+    "key":  {
+                "#":  {
+                          "item":  "collectorsreap:lucuma_leaf_pile"
+                      }
+            },
+    "pattern":  [
+                    "##",
+                    "##"
+                ],
+    "result":  {
+                   "id":  "collectorsreap:lucuma_leaves"
+               },
+    "show_notification":  true
+}

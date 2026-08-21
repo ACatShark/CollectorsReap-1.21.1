@@ -1,0 +1,34 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pomegranate"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "stygian_pomegranate"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "pomegranate_slice"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:stygian_pomegranate"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:pomegranate_slice", "count": 5 } },
+                   { "item": { "id": "minecraft:gunpowder", "count": 2 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

@@ -1,0 +1,32 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "asparagus_aspic"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "sob"
+                                }
+                            ],
+    "type":  "farmersdelight:cooking",
+    "cookingtime":  200,
+    "experience":  1.0,
+    "ingredients":  [
+                        {
+                            "tag":  "c:vegetables/asparagus"
+                        },
+                        {
+                            "tag":  "c:vegetables/carrot"
+                        },
+                        {
+                            "tag":  "c:vegetables/onion"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "result":  {
+                   "id":  "collectorsreap:asparagus_aspic"
+               }
+}

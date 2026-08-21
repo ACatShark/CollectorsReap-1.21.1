@@ -1,0 +1,24 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "lucuma_leaf_pile"
+                                }
+                            ],
+    "type":  "minecraft:crafting_shapeless",
+    "category":  "misc",
+    "group":  "leaf_pile",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma_leaves"
+                        }
+                    ],
+    "result":  {
+                   "count":  4,
+                   "id":  "collectorsreap:lucuma_leaf_pile"
+               }
+}

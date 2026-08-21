@@ -1,0 +1,45 @@
+﻿{
+  "type": "neoforge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "atmospheric"
+        },
+        {
+          "type": "neoforge:item_exists",
+          "item": "atmospheric:golden_dragon_fruit"
+        },
+        {
+          "type": "neoforge:not",
+          "value": {
+            "type": "neoforge:tag_empty",
+            "tag": "c:fruits/dragon_fruit"
+          }
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "#": {
+            "tag": "c:ingots/gold"
+          },
+          "d": {
+            "tag": "c:fruits/dragon_fruit"
+          }
+        },
+        "pattern": [
+          "###",
+          "#d#",
+          "###"
+        ],
+        "result": {
+          "item": "atmospheric:golden_dragon_fruit"
+        },
+        "show_notification": true
+      }
+    }
+  ]
+}

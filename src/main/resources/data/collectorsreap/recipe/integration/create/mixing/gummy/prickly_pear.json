@@ -1,0 +1,38 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "create"
+                                },
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "sob"
+                                },
+                                {
+                                    "type":  "collectorsreap:enabled",
+                                    "value":  "prickly_pear_gummy"
+                                }
+                            ],
+    "type":  "create:mixing",
+    "heatRequirement":  "heated",
+    "ingredients":  [
+                        {
+                            "tag":  "c:fruits/prickly_pear"
+                        },
+                        {
+                            "item":  "minecraft:sugar"
+                        },
+                        {
+                            "item":  "minecraft:honey_block"
+                        },
+                        {
+                            "item":  "minecraft:kelp"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  9,
+                        "item":  "collectorsreap:prickly_pear_gummy"
+                    }
+                ]
+}

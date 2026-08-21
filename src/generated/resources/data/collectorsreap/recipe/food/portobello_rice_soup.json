@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "baked_portobello_cap"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "portobello_rice_soup"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "collectorsreap:baked_portobello_cap"
+    },
+    {
+      "tag": "c:crops/rice"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "tag": "c:crops/carrot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:portobello_rice_soup"
+  }
+}

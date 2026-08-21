@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "heartpetals"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_heartpetals": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:heartpetals"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:red_dye_from_heartpetals"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_heartpetals"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:red_dye_from_heartpetals"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "tropical_shaved_ice"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pink_dragon_fruit"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "neoforge:tag_empty",
+      "tag": "c:ice_cubes"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "collectorsreap:pink_dragon_fruit"
+    },
+    {
+      "tag": "c:fruits/lime"
+    },
+    {
+      "item": "minecraft:ice"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:tropical_shaved_ice"
+  }
+}

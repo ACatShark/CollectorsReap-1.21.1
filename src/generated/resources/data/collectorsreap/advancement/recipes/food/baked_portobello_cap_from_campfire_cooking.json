@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "baked_portobello_cap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:portobello"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:baked_portobello_cap_from_campfire_cooking"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "baked_portobello_cap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:baked_portobello_cap_from_campfire_cooking"
+    ]
+  }
+}

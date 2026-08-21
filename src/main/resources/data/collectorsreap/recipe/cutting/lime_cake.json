@@ -1,0 +1,29 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lime_cake"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lime_cake_slice"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lime_cake"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:lime_cake_slice", "count": 7 } }
+               ],
+    "tool":  {
+                 "tag":  "c:tools/knives"
+             }
+}

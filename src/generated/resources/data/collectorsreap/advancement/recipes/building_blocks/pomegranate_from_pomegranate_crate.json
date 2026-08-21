@@ -1,0 +1,42 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "pomegranate_crate"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pomegranate_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "collectorsreap:pomegranate_crate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:pomegranate_from_pomegranate_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pomegranate_crate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:pomegranate_from_pomegranate_crate"
+    ]
+  }
+}

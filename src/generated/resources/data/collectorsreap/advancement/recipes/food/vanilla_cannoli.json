@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "neapolitan:dried_vanilla_pods"
+      }
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "vanilla_cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cannoli"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lime"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "cream_cheese"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cream_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:cheese/mild/cream"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/vanilla_cannoli"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cream_cheese"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/vanilla_cannoli"
+    ]
+  }
+}

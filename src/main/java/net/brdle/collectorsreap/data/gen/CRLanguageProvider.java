@@ -1,0 +1,507 @@
+package net.brdle.collectorsreap.data.gen;
+
+import net.brdle.collectorsreap.CollectorsReap;
+import net.brdle.collectorsreap.Util;
+import net.brdle.collectorsreap.common.block.CRBlocks;
+import net.brdle.collectorsreap.common.effect.CREffects;
+import net.brdle.collectorsreap.common.entity.CREntities;
+import net.brdle.collectorsreap.common.item.CRItems;
+import net.brdle.collectorsreap.data.CRItemTags;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.TagKey;
+import net.neoforged.neoforge.common.data.LanguageProvider;
+import org.jetbrains.annotations.NotNull;
+import vectorwing.farmersdelight.FarmersDelight;
+
+public class CRLanguageProvider extends LanguageProvider {
+	public CRLanguageProvider(PackOutput output) {
+		super(output, CollectorsReap.MODID, "en_us");
+	}
+
+	@Override
+	protected void addTranslations() {
+		addEntities();
+		addFluids();
+		addTooltips();
+		addText();
+		addEffects();
+		addBlocks();
+		addItems();
+		addTags();
+		addSubtitles();
+	}
+
+	private void addEntities() {
+		addEntityType(CREntities.TIGER_PRAWN, "Tiger Prawn");
+		addEntityType(CREntities.PLATINUM_BASS, "Platinum Bass");
+		addEntityType(CREntities.CHIEFTAIN_CRAB, "Chieftain Crab");
+		addEntityType(CREntities.CLAM, "Tide Clam");
+		addEntityType(CREntities.URCHIN, "Urchin");
+		addEntityType(CREntities.URCHIN_DART, "Thrown Urchin Dart");
+		addEntityType(CREntities.SHIMMERING_PEARL, "Thrown Shimmering Pearl");
+	}
+
+	private void addFluids() {
+		add("fluid_type." + CollectorsReap.MODID + ".cream_cheese_type", "Cream Cheese");
+		add("fluid_type." + CollectorsReap.MODID + ".lime_juice_type", "Limeade");
+		add("fluid_type." + CollectorsReap.MODID + ".strong_lime_juice_type", "Limeade");
+		add("fluid_type." + CollectorsReap.MODID + ".berry_limeade_type", "Berry Limeade");
+		add("fluid_type." + CollectorsReap.MODID + ".pink_limeade_type", "Pink Limeade");
+		add("fluid_type." + CollectorsReap.MODID + ".mint_limeade_type", "Mint Limeade");
+		add("fluid_type." + CollectorsReap.MODID + ".lime_green_tea_type", "Lime Green Tea");
+		add("fluid_type." + CollectorsReap.MODID + ".pomegranate_black_tea_type", "Pomegranate Black Tea");
+		add("fluid_type." + CollectorsReap.MODID + ".vernal_purge_type", "Vernal Purge");
+		add("fluid_type." + CollectorsReap.MODID + ".strong_vernal_purge_type", "Vernal Purge");
+		add("fluid_type." + CollectorsReap.MODID + ".limbo_brew_type", "Limbo Brew");
+		add("fluid_type." + CollectorsReap.MODID + ".long_limbo_brew_type", "Limbo Brew");
+		add("fluid_type." + CollectorsReap.MODID + ".strong_limbo_brew_type", "Limbo Brew");
+		add("fluid_type." + CollectorsReap.MODID + ".sweet_recovery_type", "Sweet Recovery");
+		add("fluid_type." + CollectorsReap.MODID + ".long_sweet_recovery_type", "Sweet Recovery");
+		add("fluid_type." + CollectorsReap.MODID + ".strong_sweet_recovery_type", "Sweet Recovery");
+		add("fluid_type." + CollectorsReap.MODID + ".deific_blood_type", "Deific Blood");
+		add("fluid_type." + CollectorsReap.MODID + ".hermits_sour_type", "Hermit's Sour");
+		add("fluid_type." + CollectorsReap.MODID + ".rose_moon_type", "Rosé Moon");
+		add("fluid_type." + CollectorsReap.MODID + ".reanimators_garden_type", "Reanimator's Garden");
+		add("fluid_type." + CollectorsReap.MODID + ".heavens_cream_type", "Heaven's Cream");
+	}
+
+	private void addTooltips() {
+		addTooltip("disabled", "Disabled");
+		addTooltip("requires_empty_tag", "Requires empty tag:");
+		addTooltip("requires_tag", "Requires tag:");
+		addTooltip("requires_modid", "Requires modid:");
+		addCRTooltip(Util.name(CRItems.STRAW_BRUSH) + ".pollinated", "Pollen Covered");
+		addCRTooltip(Util.name(CRItems.HEMP_GUMMY) + ".when_feeding", "When fed to a mob:");
+		add(FarmersDelight.MODID + ".tooltip.asparagus_aspic", "Tastes Funny");
+		add(FarmersDelight.MODID + ".tooltip.stygian_pomegranate", "Explosive");
+		add(FarmersDelight.MODID + ".tooltip.vernal_purge", "Clears Harmful Effects");
+		add(FarmersDelight.MODID + ".tooltip.strong_vernal_purge", "Clears Harmful Effects");
+		add(FarmersDelight.MODID + ".tooltip.limbo_brew", "Extends Beneficial Effects by 30s");
+		add(FarmersDelight.MODID + ".tooltip.long_limbo_brew", "Extends Beneficial Effects by 15s");
+		add(FarmersDelight.MODID + ".tooltip.strong_limbo_brew", "Extends Beneficial Effects by 60s");
+		add(FarmersDelight.MODID + ".tooltip.panettone_slice", "Provides a random Beneficial Effect");
+	}
+
+	private void addText() {
+		add("trim_material." + CollectorsReap.MODID + ".pearl", "Pearl Material");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRBlocks.PORTOBELLO), "Portobellos can be rarely found in meadows.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.LIME), "Limes can be found as a wild bush in flower forests.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.LIME) + ".pollination", "A flowering Lime Bush will grow fruit when pollinated by a Bee.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.POMEGRANATE), "Pomegranates can be found as a wild bush in warped forests.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.POMEGRANATE) + ".pollination", "A flowering Pomegranate Bush will grow fruit in the Overworld when pollinated by a Bee.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.STYGIAN_POMEGRANATE), "A dangerous variant that can be rarely picked from Pomegranate Bushes growing on Resurgent Soil.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.PINK_DRAGON_FRUIT), "Pink Dragon Fruits can be found as a wild bush in the badlands.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.LUCUMA), "Lucuma Saplings can be found in Ancient Cities, growing a tree that provides a powerful fruit.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.URCHIN_DART), "Poisonous projectiles that can be thrown by hand or fired using Bamboo in your offhand.");
+		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.STRAW_BRUSH), "Steal pollen from a Bee and use it to allow a plant to reach later stages.");
+		add("itemGroup." + CollectorsReap.MODID, "Collector's Reap");
+		add("config.jade.plugin_" + CollectorsReap.MODID + ".crop_progress", "Crop Progress");
+	}
+
+	private void addEffects() {
+		addEffect(CREffects.CORROSION, "Corrosion");
+		add(CREffects.CORROSION.get().getDescriptionId() + ".description", "A defensive acid shield that corrodes incoming projectiles and weapons.");
+		addEffect(CREffects.VOLATILITY, "Volatility");
+		add(CREffects.VOLATILITY.get().getDescriptionId() + ".description", "Striking an enemy creates a shockwave of splash damage.");
+		addEffect(CREffects.SURGE, "Surge");
+		add(CREffects.SURGE.get().getDescriptionId() + ".description", "Increases melee damage; gaining amplifier with successful strikes. Resets upon landing a hit at maximum amplifier.");
+		addEffect(CREffects.REBOUND, "Rebound");
+		add(CREffects.REBOUND.get().getDescriptionId() + ".description", "Provides a chance to recover health when taking damage.");
+	}
+
+	private void addBlocks() {
+		addBlock(CRBlocks.PORTOBELLO, "Portobello Mushroom");
+		addBlock(CRBlocks.PORTOBELLO_COLONY, "Portobello Mushroom Colony");
+		addBlock(CRBlocks.PORTOBELLO_QUICHE, "Portobello Quiche");
+		addBlock(CRBlocks.LIME_PIE, "Key Lime Pie");
+		addBlock(CRBlocks.LIME_BUSH, "Lime Bush");
+		addBlock(CRBlocks.LIME_CRATE, "Lime Crate");
+		addBlock(CRBlocks.POMEGRANATE_BUSH, "Pomegranate Bush");
+		addBlock(CRBlocks.POMEGRANATE_CRATE, "Pomegranate Crate");
+		addBlock(CRBlocks.STYGIAN_POMEGRANATE_CRATE, "Stygian Pomegranate Crate");
+		addBlock(CRBlocks.DRAGON_BUSH, "Dragon Bush");
+		addBlock(CRBlocks.BUDDING_PINK_DRAGON_FRUIT_CROP, "Budding Pink Dragon Fruit Vine");
+		addBlock(CRBlocks.PINK_DRAGON_FRUIT_CROP, "Pink Dragon Fruit Vine");
+		addBlock(CRBlocks.PINK_DRAGON_FRUIT_CRATE, "Pink Dragon Fruit Crate");
+		addBlock(CRBlocks.LUCUMA_CRATE, "Lucuma Crate");
+		addBlock(CRBlocks.GILDED_LUCUMA_CRATE, "Gilded Lucuma Crate");
+		addBlock(CRBlocks.PANETTONE, "Panettone");
+		addBlock(CRBlocks.LIME_CAKE, "Lime Cake");
+		addBlock(CRBlocks.CANDLE_LIME_CAKE, "Lime Cake with Candle");
+		addBlock(CRBlocks.WHITE_CANDLE_LIME_CAKE, "Lime Cake with White Candle");
+		addBlock(CRBlocks.ORANGE_CANDLE_LIME_CAKE, "Lime Cake with Orange Candle");
+		addBlock(CRBlocks.MAGENTA_CANDLE_LIME_CAKE, "Lime Cake with Magenta Candle");
+		addBlock(CRBlocks.LIME_CANDLE_LIME_CAKE, "Lime Cake with Lime Candle");
+		addBlock(CRBlocks.PINK_CANDLE_LIME_CAKE, "Lime Cake with Pink Candle");
+		addBlock(CRBlocks.GRAY_CANDLE_LIME_CAKE, "Lime Cake with Gray Candle");
+		addBlock(CRBlocks.LIGHT_GRAY_CANDLE_LIME_CAKE, "Lime Cake with Light Gray Candle");
+		addBlock(CRBlocks.CYAN_CANDLE_LIME_CAKE, "Lime Cake with Cyan Candle");
+		addBlock(CRBlocks.PURPLE_CANDLE_LIME_CAKE, "Lime Cake with Purple Candle");
+		addBlock(CRBlocks.BLUE_CANDLE_LIME_CAKE, "Lime Cake with Blue Candle");
+		addBlock(CRBlocks.BROWN_CANDLE_LIME_CAKE, "Lime Cake with Brown Candle");
+		addBlock(CRBlocks.GREEN_CANDLE_LIME_CAKE, "Lime Cake with Green Candle");
+		addBlock(CRBlocks.RED_CANDLE_LIME_CAKE, "Lime Cake with Red Candle");
+		addBlock(CRBlocks.BLACK_CANDLE_LIME_CAKE, "Lime Cake with Black Candle");
+		addBlock(CRBlocks.POMEGRANATE_CAKE, "Pomegranate Cake");
+		addBlock(CRBlocks.CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Candle");
+		addBlock(CRBlocks.WHITE_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with White Candle");
+		addBlock(CRBlocks.ORANGE_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Orange Candle");
+		addBlock(CRBlocks.MAGENTA_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Magenta Candle");
+		addBlock(CRBlocks.LIME_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Lime Candle");
+		addBlock(CRBlocks.PINK_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Pink Candle");
+		addBlock(CRBlocks.GRAY_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Gray Candle");
+		addBlock(CRBlocks.LIGHT_GRAY_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Light Gray Candle");
+		addBlock(CRBlocks.CYAN_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Cyan Candle");
+		addBlock(CRBlocks.PURPLE_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Purple Candle");
+		addBlock(CRBlocks.BLUE_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Blue Candle");
+		addBlock(CRBlocks.BROWN_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Brown Candle");
+		addBlock(CRBlocks.GREEN_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Green Candle");
+		addBlock(CRBlocks.RED_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Red Candle");
+		addBlock(CRBlocks.BLACK_CANDLE_POMEGRANATE_CAKE, "Pomegranate Cake with Black Candle");
+		addBlock(CRBlocks.PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake");
+		addBlock(CRBlocks.CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Candle");
+		addBlock(CRBlocks.WHITE_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with White Candle");
+		addBlock(CRBlocks.ORANGE_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Orange Candle");
+		addBlock(CRBlocks.MAGENTA_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Magenta Candle");
+		addBlock(CRBlocks.LIME_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Lime Candle");
+		addBlock(CRBlocks.PINK_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Pink Candle");
+		addBlock(CRBlocks.GRAY_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Gray Candle");
+		addBlock(CRBlocks.LIGHT_GRAY_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Light Gray Candle");
+		addBlock(CRBlocks.CYAN_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Cyan Candle");
+		addBlock(CRBlocks.PURPLE_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Purple Candle");
+		addBlock(CRBlocks.BLUE_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Blue Candle");
+		addBlock(CRBlocks.BROWN_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Brown Candle");
+		addBlock(CRBlocks.GREEN_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Green Candle");
+		addBlock(CRBlocks.RED_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Red Candle");
+		addBlock(CRBlocks.BLACK_CANDLE_PINK_DRAGON_FRUIT_CAKE, "Pink Dragon Fruit Cake with Black Candle");
+		addBlock(CRBlocks.DAMSELFLOWER, "Damselflower");
+		addBlock(CRBlocks.DAMSELFLOWER_CROP, "Damselflower Crop");
+		addBlock(CRBlocks.POTTED_DAMSELFLOWER, "Potted Damselflower");
+		addBlock(CRBlocks.MOONTEAR, "Moontear");
+		addBlock(CRBlocks.MOONTEAR_CROP, "Moontear Crop");
+		addBlock(CRBlocks.POTTED_MOONTEAR, "Potted Moontear");
+		addBlock(CRBlocks.SKULL_LILY, "Skull Lily");
+		addBlock(CRBlocks.SKULL_LILY_CROP, "Skull Lily Crop");
+		addBlock(CRBlocks.POTTED_SKULL_LILY, "Potted Skull Lily");
+		addBlock(CRBlocks.BULBOUS_ROSE, "Bulbous Rose");
+		addBlock(CRBlocks.BULBOUS_ROSE_CROP, "Bulbous Rose Crop");
+		addBlock(CRBlocks.HEARTPETALS, "Heartpetals");
+		addBlock(CRBlocks.HEARTPETALS_CROP, "Heartpetals Crop");
+		addBlock(CRBlocks.LUCUMA_CAKE, "Lucuma Cake");
+		addBlock(CRBlocks.CANDLE_LUCUMA_CAKE, "Lucuma Cake with Candle");
+		addBlock(CRBlocks.WHITE_CANDLE_LUCUMA_CAKE, "Lucuma Cake with White Candle");
+		addBlock(CRBlocks.ORANGE_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Orange Candle");
+		addBlock(CRBlocks.MAGENTA_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Magenta Candle");
+		addBlock(CRBlocks.LIME_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Lime Candle");
+		addBlock(CRBlocks.PINK_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Pink Candle");
+		addBlock(CRBlocks.GRAY_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Gray Candle");
+		addBlock(CRBlocks.LIGHT_GRAY_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Light Gray Candle");
+		addBlock(CRBlocks.CYAN_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Cyan Candle");
+		addBlock(CRBlocks.PURPLE_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Purple Candle");
+		addBlock(CRBlocks.BLUE_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Blue Candle");
+		addBlock(CRBlocks.BROWN_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Brown Candle");
+		addBlock(CRBlocks.GREEN_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Green Candle");
+		addBlock(CRBlocks.RED_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Red Candle");
+		addBlock(CRBlocks.BLACK_CANDLE_LUCUMA_CAKE, "Lucuma Cake with Black Candle");
+		addBlock(CRBlocks.LIME_ICE_CREAM_BLOCK, "Lime Ice Cream Block");
+		addBlock(CRBlocks.POMEGRANATE_ICE_CREAM_BLOCK, "Pomegranate Ice Cream Block");
+		addBlock(CRBlocks.PINK_DRAGON_FRUIT_ICE_CREAM_BLOCK, "Pink Dragon Fruit Ice Cream Block");
+		addBlock(CRBlocks.LUCUMA_ICE_CREAM_BLOCK, "Lucuma Ice Cream Block");
+		addBlock(CRBlocks.LIME_MILKSHAKE_CAULDRON, "Lime Milkshake Cauldron");
+		addBlock(CRBlocks.POMEGRANATE_MILKSHAKE_CAULDRON, "Pomegranate Milkshake Cauldron");
+		addBlock(CRBlocks.PINK_DRAGON_FRUIT_MILKSHAKE_CAULDRON, "Pink Dragon Fruit Milkshake Cauldron");
+		addBlock(CRBlocks.LUCUMA_MILKSHAKE_CAULDRON, "Lucuma Milkshake Cauldron");
+		addBlock(CRBlocks.URCHIN_TEST_BLOCK, "Urchin Test Block");
+		addBlock(CRBlocks.URCHIN_TEST_BRICKS, "Urchin Test Bricks");
+		addBlock(CRBlocks.URCHIN_TEST_BRICK_SLAB, "Urchin Test Brick Slab");
+		addBlock(CRBlocks.URCHIN_TEST_BRICK_STAIRS, "Urchin Test Brick Stairs");
+		addBlock(CRBlocks.URCHIN_TEST_BRICK_WALL, "Urchin Test Brick Wall");
+		addBlock(CRBlocks.CHISELED_URCHIN_TEST_BRICKS, "Chiseled Urchin Test Bricks");
+		addBlock(CRBlocks.URCHIN_TEST_TILES, "Urchin Test Tiles");
+		addBlock(CRBlocks.URCHIN_TEST_TILE_SLAB, "Urchin Test Tile Slab");
+		addBlock(CRBlocks.URCHIN_TEST_TILE_STAIRS, "Urchin Test Tile Stairs");
+		addBlock(CRBlocks.URCHIN_TEST_TILE_WALL, "Urchin Test Tile Wall");
+		addBlock(CRBlocks.PLATINUM_BASS_ROE, "Platinum Bass Roe");
+		addBlock(CRBlocks.TIGER_PRAWN_ROE, "Tiger Prawn Roe");
+
+		// Lucuma woodset
+		addBlock(CRBlocks.LUCUMA_LOG, "Lucuma Log");
+		addBlock(CRBlocks.LUCUMA_WOOD, "Lucuma Wood");
+		addBlock(CRBlocks.STRIPPED_LUCUMA_LOG, "Stripped Lucuma Log");
+		addBlock(CRBlocks.STRIPPED_LUCUMA_WOOD, "Stripped Lucuma Wood");
+		addBlock(CRBlocks.LUCUMA_PLANKS, "Lucuma Planks");
+		addBlock(CRBlocks.LUCUMA_STAIRS, "Lucuma Stairs");
+		addBlock(CRBlocks.LUCUMA_SLAB, "Lucuma Slab");
+		addBlock(CRBlocks.LUCUMA_FENCE, "Lucuma Fence");
+		addBlock(CRBlocks.LUCUMA_FENCE_GATE, "Lucuma Fence Gate");
+		addBlock(CRBlocks.LUCUMA_DOOR, "Lucuma Door");
+		addBlock(CRBlocks.LUCUMA_TRAPDOOR, "Lucuma Trapdoor");
+		addBlock(CRBlocks.LUCUMA_PRESSURE_PLATE, "Lucuma Pressure Plate");
+		addBlock(CRBlocks.LUCUMA_BUTTON, "Lucuma Button");
+		addBlock(CRBlocks.LUCUMA_SIGN, "Lucuma Sign");
+		addBlock(CRBlocks.LUCUMA_HANGING_SIGN, "Lucuma Hanging Sign");
+		addBlock(CRBlocks.LUCUMA_SAPLING, "Lucuma Sapling");
+		addBlock(CRBlocks.POTTED_LUCUMA_SAPLING, "Potted Lucuma Sapling");
+		addBlock(CRBlocks.LUCUMA_LEAVES, "Lucuma Leaves");
+		addBlock(CRBlocks.LUCUMA_LEAF_PILE, "Pile of Lucuma Leaves");
+		addBlock(CRBlocks.LUCUMA_CABINET, "Lucuma Cabinet");
+		addBlock(CRBlocks.LUCUMA_BEEHIVE, "Lucuma Beehive");
+		addBlock(CRBlocks.LUCUMA_LADDER, "Lucuma Ladder");
+		addBlock(CRBlocks.LUCUMA_BOOKSHELF, "Lucuma Bookshelf");
+		addBlock(CRBlocks.CHISELED_LUCUMA_BOOKSHELF, "Chiseled Lucuma Bookshelf");
+		addBlock(CRBlocks.LUCUMA_BOARDS, "Lucuma Boards");
+		addBlock(CRBlocks.LUCUMA_CHEST, "Lucuma Chest");
+		addBlock(CRBlocks.TRAPPED_LUCUMA_CHEST, "Trapped Lucuma Chest");
+	}
+
+	private void addItems() {
+		// Lucuma wood
+		addItem(CRItems.LUCUMA_BOAT, "Lucuma Boat");
+		addItem(CRItems.LUCUMA_CHEST_BOAT, "Lucuma Boat with Chest");
+		addItem(CRItems.LUCUMA_FURNACE_BOAT, "Lucuma Boat with Furnace");
+		addItem(CRItems.LARGE_LUCUMA_BOAT, "Large Lucuma Boat");
+
+		// Sniffer Plant Seeds
+		addItem(CRItems.DAMSELFLOWER_SEEDS, "Damselflower Seeds");
+		addItem(CRItems.MOONTEAR_SEEDS, "Moontear Seeds");
+		addItem(CRItems.SKULL_LILY_SEEDS, "Skull Lily Seeds");
+		addItem(CRItems.BULBOUS_ROSE_SEEDS, "Bulbous Rose Seeds");
+		addItem(CRItems.HEARTPETALS_SEEDS, "Heartpetals Seeds");
+
+		addItem(CRItems.BAKED_PORTOBELLO_CAP, "Baked Portobello Cap");
+		addItem(CRItems.STUFFED_PORTOBELLO_CAP, "Stuffed Portobello");
+		addItem(CRItems.PORTOBELLO_BURGER, "Portoburger");
+		addItem(CRItems.PORTOBELLO_PASTA, "Pasta with Mushroom");
+		addItem(CRItems.PORTOBELLO_RISOTTO, "Portobello Risotto");
+		addItem(CRItems.PORTOBELLO_WRAP, "Portobello Wrap");
+		addItem(CRItems.PORTOBELLO_RICE_SOUP, "Wild Rice Soup");
+		addItem(CRItems.PORTOBELLO_RICE_SOUP_CUP, "Wild Rice Soup Cup");
+		addItem(CRItems.PORTOBELLO_QUICHE_SLICE, "Slice of Portobello Quiche");
+		addItem(CRItems.LUCUMA, "Lucuma");
+		addItem(CRItems.GILDED_LUCUMA, "Gilded Lucuma");
+		addItem(CRItems.LUCUMA_BREAD, "Lucuma Bread");
+		addItem(CRItems.LUCUMA_PUDDING, "Lucuma Pudding");
+		addItem(CRItems.LUCUMA_GAZPACHO, "Lucuma Gazpacho");
+		addItem(CRItems.LUCUMA_GAZPACHO_CUP, "Lucuma Gazpacho Cup");
+		addItem(CRItems.PINK_DRAGON_FRUIT, "Pink Dragon Fruit");
+		addItem(CRItems.DRIED_PINK_DRAGON_FRUIT, "Dried Pink Dragon Fruit");
+		addItem(CRItems.PINK_NOODLES, "Pink Noodles");
+		addItem(CRItems.DRAGON_STEW, "Dragon Stew");
+		addItem(CRItems.DRAGON_STEW_CUP, "Dragon Stew Cup");
+		addItem(CRItems.TROPICAL_SHAVED_ICE, "Tropical Shaved Ice");
+		addItem(CRItems.DRAGONS_PASSION, "Dragon's Passion");
+		addItem(CRItems.DRAGON_FRUIT_SEEDS, "Dragon Fruit Seeds");
+		addItem(CRItems.PANETTONE_SLICE, "Slice of Panettone");
+		addItem(CRItems.LIME_PIE_SLICE, "Slice of Key Lime Pie");
+		addItem(CRItems.LIME, "Lime");
+		addItem(CRItems.LIME_SEEDS, "Lime Seeds");
+		addItem(CRItems.LIME_SLICE, "Lime Slice");
+		addItem(CRItems.LIME_POPSICLE, "Lime Popsicle");
+		addItem(CRItems.LIME_COOKIE, "Lime Cookie");
+		addItem(CRItems.CANDIED_LIME, "Candied Lime");
+		addItem(CRItems.HONEY_LIME_CHICKEN, "Honey Lime Chicken");
+		addItem(CRItems.COD_CEVICHE, "Cod Ceviche");
+		addItem(CRItems.MEDITERRANEAN_SALMON, "Mediterranean Salmon");
+		addItem(CRItems.SALMON_TARTARE, "Salmon Tartare");
+		addItem(CRItems.POTATO_FRITTERS, "Potato Fritters");
+		addItem(CRItems.LIMEADE, "Limeade");
+		addItem(CRItems.STRONG_LIMEADE, "Limeade");
+		addItem(CRItems.BERRY_LIMEADE, "Berry Limeade");
+		addItem(CRItems.MINT_LIMEADE, "Mint Limeade");
+		addItem(CRItems.LIME_GREEN_TEA, "Lime Green Tea");
+		addItem(CRItems.POMEGRANATE_BLACK_TEA, "Pomegranate Black Tea");
+		addItem(CRItems.VERNAL_PURGE, "Vernal Purge");
+		addItem(CRItems.STRONG_VERNAL_PURGE, "Vernal Purge");
+		addItem(CRItems.LIMBO_BREW, "Limbo Brew");
+		addItem(CRItems.LONG_LIMBO_BREW, "Limbo Brew");
+		addItem(CRItems.STRONG_LIMBO_BREW, "Limbo Brew");
+		addItem(CRItems.SWEET_RECOVERY, "Sweet Recovery");
+		addItem(CRItems.LONG_SWEET_RECOVERY, "Sweet Recovery");
+		addItem(CRItems.STRONG_SWEET_RECOVERY, "Sweet Recovery");
+		addItem(CRItems.POMEGRANATE_SMOOTHIE, "Pomegranate Smoothie");
+		addItem(CRItems.POMEGRANATE, "Pomegranate");
+		addItem(CRItems.POMEGRANATE_SEEDS, "Pomegranate Seeds");
+		addItem(CRItems.POMEGRANATE_SLICE, "Pomegranate Slice");
+		addItem(CRItems.POMEGRANATE_MUTTON, "Pomegranate Mutton");
+		addItem(CRItems.POMEGRANATE_CHICKEN, "Pomegranate Chicken");
+		addItem(CRItems.POMEGRANATE_PORK, "Pomegranate Pork");
+		addItem(CRItems.POMEGRANATE_CUSTARD, "Pomegranate Custard");
+		addItem(CRItems.STYGIAN_POMEGRANATE, "Stygian Pomegranate");
+		addItem(CRItems.PINK_LIMEADE, "Pink Limeade");
+		addItem(CRItems.SPICY_GRENADINE_JELLY, "Spicy Grenadine Jelly");
+		addItem(CRItems.GLAZED_STRIDER, "Glazed Strider");
+		addItem(CRItems.CRIMSON_CARROT_ROAST, "Crimson Carrot Roast");
+		addItem(CRItems.DELUXE_SALAD, "Deluxe Salad");
+		addItem(CRItems.CREAM_CHEESE, "Cream Cheese");
+		addItem(CRItems.PRAWN_SPREAD, "Prawn Spread");
+		addItem(CRItems.CARBONARA_PASTA, "Carbonara Pasta");
+		addItem(CRItems.STUFFED_PASTA_SHELLS, "Stuffed Pasta Shells");
+		addItem(CRItems.BULLET_PEPPER_POPPER, "Bullet Pepper Popper");
+		addItem(CRItems.CANNOLI, "Cannoli");
+		addItem(CRItems.LUCUMA_CANNOLI, "Lucuma Cannoli");
+		addItem(CRItems.COFFEE_CANNOLI, "Coffee Cannoli");
+		addItem(CRItems.CHOCOLATE_CANNOLI, "Chocolate Cannoli");
+		addItem(CRItems.MINT_CANNOLI, "Mint Cannoli");
+		addItem(CRItems.STRAWBERRY_CANNOLI, "Strawberry Cannoli");
+		addItem(CRItems.VANILLA_CANNOLI, "Vanilla Cannoli");
+		addItem(CRItems.LIME_CAKE_SLICE, "Slice of Lime Cake");
+		addItem(CRItems.POMEGRANATE_CAKE_SLICE, "Slice of Pomegranate Cake");
+		addItem(CRItems.PINK_DRAGON_FRUIT_CAKE_SLICE, "Slice of Pink Dragon Fruit Cake");
+		addItem(CRItems.LUCUMA_CAKE_SLICE, "Slice of Lucuma Cake");
+		addItem(CRItems.LIME_ICE_CREAM, "Lime Ice Cream");
+		addItem(CRItems.POMEGRANATE_ICE_CREAM, "Pomegranate Ice Cream");
+		addItem(CRItems.PINK_DRAGON_FRUIT_ICE_CREAM, "Pink Dragon Fruit Ice Cream");
+		addItem(CRItems.LUCUMA_ICE_CREAM, "Lucuma Ice Cream");
+		addItem(CRItems.SUNNY_ICE_CREAM, "Sunny Ice Cream");
+		addItem(CRItems.LIME_MILKSHAKE, "Lime Milkshake");
+		addItem(CRItems.POMEGRANATE_MILKSHAKE, "Pomegranate Milkshake");
+		addItem(CRItems.PINK_DRAGON_FRUIT_MILKSHAKE, "Pink Dragon Fruit Milkshake");
+		addItem(CRItems.LUCUMA_MILKSHAKE, "Lucuma Milkshake");
+		addItem(CRItems.CHOCOLATE_ARILS, "Chocolate Arils");
+		addItem(CRItems.POMEGRANATE_BEAN_SALAD, "Pomegranate and Bean Salad");
+		addItem(CRItems.STRAWBERRY_JAM_BUN, "Strawberry Jam Bun");
+		addItem(CRItems.DEIFIC_BLOOD, "Deific Blood");
+		addItem(CRItems.HERMITS_SOUR, "Hermit's Sour");
+		addItem(CRItems.ROSE_MOON, "Rosé Moon");
+		addItem(CRItems.REANIMATORS_GARDEN, "Reanimator's Garden");
+		addItem(CRItems.HEAVENS_CREAM, "Heaven's Cream");
+		addItem(CRItems.LIME_GUMMY, "Lime Gummy");
+		addItem(CRItems.POMEGRANATE_GUMMY, "Pomegranate Gummy");
+		addItem(CRItems.PINK_DRAGON_FRUIT_GUMMY, "Pink Dragon Fruit Gummy");
+		addItem(CRItems.LUCUMA_GUMMY, "Lucuma Gummy");
+		addItem(CRItems.MELON_GUMMY, "Melon Gummy");
+		addItem(CRItems.APPLE_GUMMY, "Apple Gummy");
+		addItem(CRItems.GLOW_BERRY_GUMMY, "Glow Berry Gummy");
+		addItem(CRItems.CARROT_GUMMY, "Carrot Gummy");
+		addItem(CRItems.BANANA_GUMMY, "Banana Gummy");
+		addItem(CRItems.VANILLA_GUMMY, "Vanilla Gummy");
+		addItem(CRItems.CHOCOLATE_GUMMY, "Chocolate Gummy");
+		addItem(CRItems.STRAWBERRY_GUMMY, "Strawberry Gummy");
+		addItem(CRItems.MINT_GUMMY, "Mint Gummy");
+		addItem(CRItems.ADZUKI_GUMMY, "Adzuki Gummy");
+		addItem(CRItems.PUMPKIN_GUMMY, "Pumpkin Gummy");
+		addItem(CRItems.SWEET_BERRY_GUMMY, "Sweet Berry Gummy");
+		addItem(CRItems.BEETROOT_GUMMY, "Beetroot Gummy");
+		addItem(CRItems.ALOE_GUMMY, "Aloe Gummy");
+		addItem(CRItems.WILD_BERRY_GUMMY, "Wild Berry Gummy");
+		addItem(CRItems.PASSION_FRUIT_GUMMY, "Passion Fruit Gummy");
+		addItem(CRItems.YUCCA_GUMMY, "Yucca Gummy");
+		addItem(CRItems.GREEN_TEA_GUMMY, "Green Tea Gummy");
+		addItem(CRItems.YELLOW_TEA_GUMMY, "Yellow Tea Gummy");
+		addItem(CRItems.BLACK_TEA_GUMMY, "Black Tea Gummy");
+		addItem(CRItems.COFFEE_GUMMY, "Coffee Gummy");
+		addItem(CRItems.BULLET_PEPPER_GUMMY, "Bullet Pepper Gummy");
+		addItem(CRItems.PRICKLY_PEAR_GUMMY, "Prickly Pear Gummy");
+		addItem(CRItems.PEANUT_GUMMY, "Peanut Gummy");
+		addItem(CRItems.ASPARAGUS_ASPIC, "Asparagus Aspic");
+		addItem(CRItems.HEMP_GUMMY, "Weed Gummy");
+		addItem(CRItems.TIGER_PRAWN_SPAWN_EGG, "Tiger Prawn Spawn Egg");
+		addItem(CRItems.TIGER_PRAWN_BUCKET, "Bucket of Tiger Prawn");
+		addItem(CRItems.TIGER_PRAWN, "Raw Tiger Prawn");
+		addItem(CRItems.COOKED_TIGER_PRAWN, "Cooked Tiger Prawn");
+		addItem(CRItems.PRAWN_ROLL, "Prawn Roll");
+		addItem(CRItems.PRAWN_PO_BOY, "Prawn Po' Boy");
+		addItem(CRItems.PRAWN_STEW, "Prawn Stew");
+		addItem(CRItems.PRAWN_STEW_CUP, "Prawn Stew Cup");
+		addItem(CRItems.PRAWN_CEVICHE, "Prawn Ceviche");
+		addItem(CRItems.PRAWN_NOODLES, "Prawn Noodles");
+		addItem(CRItems.SALMON_WRAPPED_PRAWN, "Salmon Wrapped Prawn");
+		addItem(CRItems.URCHIN_SPAWN_EGG, "Urchin Spawn Egg");
+		addItem(CRItems.URCHIN_BUCKET, "Bucket of Urchin");
+		addItem(CRItems.URCHIN, "Urchin");
+		addItem(CRItems.URCHIN_TEST, "Urchin Test");
+		addItem(CRItems.URCHIN_NEEDLE, "Urchin Needle");
+		addItem(CRItems.URCHIN_DART, "Urchin Dart");
+		addItem(CRItems.UNI, "Uni");
+		addItem(CRItems.UNI_ROLL, "Uni Roll");
+		addItem(CRItems.PLATINUM_BASS_SPAWN_EGG, "Platinum Bass Spawn Egg");
+		addItem(CRItems.PLATINUM_BASS_BUCKET, "Bucket of Platinum Bass");
+		addItem(CRItems.PLATINUM_BASS, "Raw Platinum Bass");
+		addItem(CRItems.COOKED_PLATINUM_BASS, "Cooked Platinum Bass");
+		addItem(CRItems.PLATINUM_BASS_HEAD, "Platinum Bass Head");
+		addItem(CRItems.COOKED_PLATINUM_BASS_HEAD, "Cooked Platinum Bass Head");
+		addItem(CRItems.PLATINUM_BASS_SLICE, "Raw Platinum Bass Slice");
+		addItem(CRItems.COOKED_PLATINUM_BASS_SLICE, "Cooked Platinum Bass Slice");
+		addItem(CRItems.PLATINUM_BASS_STEW, "Platinum Bass Stew");
+		addItem(CRItems.PLATINUM_BASS_STEW_CUP, "Platinum Bass Stew Cup");
+		addItem(CRItems.STRAW_BRUSH, "Straw Brush");
+		addItem(CRItems.FISH_MIX, "Fish Mix");
+		addItem(CRItems.CHIEFTAIN_CRAB_SPAWN_EGG, "Chieftain Crab Spawn Egg");
+		addItem(CRItems.CHIEFTAIN_CRAB_BUCKET, "Bucket of Chieftain Crab");
+		addItem(CRItems.CHIEFTAIN_CRAB, "Chieftain Crab");
+		addItem(CRItems.CHIEFTAIN_CLAW, "Chieftain Crab Claw");
+		addItem(CRItems.CHIEFTAIN_LEG, "Chieftain Crab Leg");
+		addItem(CRItems.CHIEFTAIN_CRAB_MEAT, "Chieftain Crab Meat");
+		addItem(CRItems.CRAB_MISO, "Crab Miso");
+		addItem(CRItems.LAND_AND_SEA_BURGER, "Land and Sea Burger");
+		addItem(CRItems.CRAB_NOODLES, "Crab Noodles");
+		addItem(CRItems.CRAB_LASAGNA, "Crab Lasagna");
+		addItem(CRItems.BUTTERED_LEGS, "Buttered Legs");
+		addItem(CRItems.BIG_RICE_BALL, "Big Rice Ball");
+		addItem(CRItems.LUNAR_PEARL, "Lunar Pearl");
+		addItem(CRItems.SHIMMERING_APPLE, "Shimmering Apple");
+		addItem(CRItems.SHIMMERING_PEARL, "Shimmering Pearl");
+		addItem(CRItems.PEARLY_CLAW, "Pearly Claw");
+		addItem(CRItems.CLAM_SPAWN_EGG, "Tide Clam Spawn Egg");
+		addItem(CRItems.CLAM_BUCKET, "Bucket of Tide Clam");
+		addItem(CRItems.CLAM, "Tide Clam");
+		addItem(CRItems.CLAM_MEAT, "Tide Clam Meat");
+		addItem(CRItems.CLAM_ROLL, "Clam Roll");
+		addItem(CRItems.CLAM_CHOWDER, "Clam Chowder");
+		addItem(CRItems.CLAM_PASTA, "Pasta with Clams");
+		addItem(CRItems.CLAM_MEATBALL_STEW, "Clam and Meatball Stew");
+		addItem(CRItems.CLAM_MEATBALL_STEW_CUP, "Clam and Meatball Stew Cup");
+		addItem(CRItems.SEA_WRAP, "Sea Wrap");
+	}
+
+	private void addTags() {
+		// Forge
+		addItemTag(CRItemTags.COOKED_MUSHROOMS, "Cooked Mushrooms");
+		addItemTag(CRItemTags.FRUITS_DRAGON_FRUIT, "Dragon Fruit");
+		addItemTag(CRItemTags.ROE, "Roe");
+		addItemTag(CRItemTags.FISH_ROE, "Fish Roe");
+		addItemTag(CRItemTags.PRAWN_ROE, "Prawn Roe");
+
+		// Collector's Reap
+		addItemTag(CRItemTags.GUMMIES, "Gummies");
+		addItemTag(CRItemTags.MOB_FEEDABLE_GUMMIES, "Mob Feedable Gummies");
+		addItemTag(CRItemTags.CHIEFTAIN_CRAB_FOOD, "Chieftain Crab Foods");
+		addItemTag(CRItemTags.DART_SHOOTERS, "Dart Shooters");
+		addItemTag(CRItemTags.HOT_NETHER_FRUITS, "Hot Nether Fruits");
+		addItemTag(CRItemTags.LUCUMA_LOGS, "Lucuma Logs");
+	}
+
+	private void addSubtitles() {
+		add(CollectorsReap.MODID + ".subtitle.straw_brush.collect", "Straw Brush collects");
+		add(CollectorsReap.MODID + ".subtitle.straw_brush.pollinate", "Straw Brush pollinates");
+		add(CollectorsReap.MODID + ".subtitle.urchin_dart.throw", "Urchin Dart thrown");
+		add(CollectorsReap.MODID + ".subtitle.urchin_dart.hit", "Urchin Dart hits");
+		add(CollectorsReap.MODID + ".subtitle.shimmering_pearl.throw", "Shimmering Pearl flies");
+		add(CollectorsReap.MODID + ".subtitle.shimmering_pearl.break", "Shimmering Pearl shatters");
+		add(CollectorsReap.MODID + ".subtitle.platinum_bass.death", "Platinum Bass dies");
+		add(CollectorsReap.MODID + ".subtitle.platinum_bass.flop", "Platinum Bass flops");
+		add(CollectorsReap.MODID + ".subtitle.platinum_bass.hurt", "Platinum Bass hurts");
+		add(CollectorsReap.MODID + ".subtitle.lime.pick", "Lime pops");
+		add(CollectorsReap.MODID + ".subtitle.pomegranate.pick", "Pomegranate pops");
+		add(CollectorsReap.MODID + ".subtitle.dragon_fruit.pick", "Dragon Fruit pops");
+		add(CollectorsReap.MODID + ".subtitle.rebound.heal", "Health rebounds");
+		add(CollectorsReap.MODID + ".subtitle.corrosion.corrode", "Acid corrodes");
+	}
+
+	public void addItemTag(@NotNull TagKey<?> tag, @NotNull String translation) {
+		add(
+			"tag.item." + tag.location()
+				.toLanguageKey()
+				.replace("/", "."),
+			translation
+		);
+	}
+
+	public void addTooltip(String key, String translation) {
+		add("tooltip." + key, translation);
+	}
+
+	public void addCRTooltip(String key, String translation) {
+		addTooltip(CollectorsReap.MODID + "." + key, translation);
+	}
+}

@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "chocolate_arils"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "neapolitan:chocolate_bar"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "neapolitan"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pomegranate_seeds": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:seeds/pomegranate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "collectorsreap:food/chocolate_arils"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pomegranate_seeds"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "collectorsreap:food/chocolate_arils"
+    ]
+  }
+}

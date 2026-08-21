@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "collectorsreap:enabled",
+      "value": "lucuma"
+    },
+    {
+      "type": "collectorsreap:enabled",
+      "value": "gilded_lucuma"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "tag": "c:ingots/gold"
+    },
+    "l": {
+      "item": "collectorsreap:lucuma"
+    }
+  },
+  "pattern": [
+    "ggg",
+    "glg",
+    "ggg"
+  ],
+  "result": {
+    "count": 1,
+    "id": "collectorsreap:gilded_lucuma"
+  }
+}

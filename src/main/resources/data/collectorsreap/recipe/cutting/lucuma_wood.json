@@ -1,0 +1,31 @@
+{
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:and",
+                                    "values":  [
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "lucuma"
+                                                   },
+                                                   {
+                                                       "type":  "collectorsreap:enabled",
+                                                       "value":  "stripped_lucuma_wood"
+                                                   }
+                                               ]
+                                }
+                            ],
+    "type":  "farmersdelight:cutting",
+    "ingredients":  [
+                        {
+                            "item":  "collectorsreap:lucuma_wood"
+                        }
+                    ],
+    "result":  [
+                   { "item": { "id": "collectorsreap:stripped_lucuma_wood" } },
+                   { "item": { "id": "farmersdelight:tree_bark" } }
+               ],
+    "tool":  {
+                 "type":  "farmersdelight:tool_action",
+                 "action":  "axe_dig"
+             }
+}
