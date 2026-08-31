@@ -12,7 +12,7 @@ Farmer's Delight addon with foods scavenged from the wild.
 ## 1.21.1 NeoForge Port
 This branch has been ported to **NeoForge 1.21.1** (Minecraft 1.21.1, loaders >= 21.1).
 
-- Requires NeoForge `21.1.x`, Farmer's Delight `1.21.1-1.2.3+` and Blueprint `8.1.x+`.
+- Requires NeoForge `21.1.x`, Farmer's Delight `1.21.1-1.3.x+` and Blueprint `8.1.x+`.
 - Optional integrations: Neapolitan, Boatload, Brewin' and Chewin', Jade, JEI, Farmer's Respite.
 - Build with JDK 21: `./gradlew build` (or `gradlew.bat build` on Windows).
 - Regenerate data (recipes/loot/tags/models) with `./gradlew runData` after building.
