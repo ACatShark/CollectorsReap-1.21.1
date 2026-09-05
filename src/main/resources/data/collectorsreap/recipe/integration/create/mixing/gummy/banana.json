@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:foods/banana"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:banana_gummy"
+                        "id":  "collectorsreap:banana_gummy"
                     }
                 ]
 }

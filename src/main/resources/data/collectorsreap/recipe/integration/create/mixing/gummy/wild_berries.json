@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:fruits/wild_berries"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:wild_berry_gummy"
+                        "id":  "collectorsreap:wild_berry_gummy"
                     }
                 ]
 }

@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "neapolitan:chocolate_bar"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:chocolate_gummy"
+                        "id":  "collectorsreap:chocolate_gummy"
                     }
                 ]
 }

@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "nirvana:weed"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:hemp_gummy"
+                        "id":  "collectorsreap:hemp_gummy"
                     }
                 ]
 }

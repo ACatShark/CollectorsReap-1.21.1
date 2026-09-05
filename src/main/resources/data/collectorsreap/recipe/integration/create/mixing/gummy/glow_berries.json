@@ -10,7 +10,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "minecraft:glow_berries"
@@ -28,7 +28,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:glow_berry_gummy"
+                        "id":  "collectorsreap:glow_berry_gummy"
                     }
                 ]
 }

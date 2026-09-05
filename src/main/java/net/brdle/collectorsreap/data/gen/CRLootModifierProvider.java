@@ -63,27 +63,6 @@ public class CRLootModifierProvider extends GlobalLootModifierProvider {
 			new LootItemCondition[]{enabled(CRItems.LUNAR_PEARL).build()},
 			BuiltInLootTables.BURIED_TREASURE, CRItems.LUNAR_PEARL.get(), 2, 7, 1F
 		));
-		this.add("sniffer_digging_damselflower_seeds", new LootTableAddItemModifier(
-			new LootItemCondition[]{enabled(CRItems.DAMSELFLOWER_SEEDS).build()},
-			BuiltInLootTables.SNIFFER_DIGGING, CRItems.DAMSELFLOWER_SEEDS.get(), 1, 1, 1F
-		));
-		this.add("sniffer_digging_moontear_seeds", new LootTableAddItemModifier(
-			new LootItemCondition[]{enabled(CRItems.MOONTEAR_SEEDS).build()},
-			BuiltInLootTables.SNIFFER_DIGGING, CRItems.MOONTEAR_SEEDS.get(), 1, 1, 1F
-		));
-		this.add("sniffer_digging_skull_lily_seeds", new LootTableAddItemModifier(
-			new LootItemCondition[]{enabled(CRItems.SKULL_LILY_SEEDS).build()},
-			BuiltInLootTables.SNIFFER_DIGGING, CRItems.SKULL_LILY_SEEDS.get(), 1, 1, 1F
-		));
-		this.add("sniffer_digging_bulbous_rose_seeds", new LootTableAddItemModifier(
-			new LootItemCondition[]{enabled(CRItems.BULBOUS_ROSE_SEEDS).build()},
-			BuiltInLootTables.SNIFFER_DIGGING, CRItems.BULBOUS_ROSE_SEEDS.get(), 1, 1, 1F
-		));
-		this.add("sniffer_digging_heartpetals_seeds", new LootTableAddItemModifier(
-			new LootItemCondition[]{enabled(CRItems.HEARTPETALS_SEEDS).build()},
-			BuiltInLootTables.SNIFFER_DIGGING, CRItems.HEARTPETALS_SEEDS.get(), 1, 1, 1F
-		));
-
 		// Fishing
 		final LootItemCondition.Builder inRiver = LocationCheck.checkLocation(inBiome(Biomes.RIVER));
 		final LootItemCondition.Builder inSwamp = LocationCheck.checkLocation(inBiome(Biomes.SWAMP));

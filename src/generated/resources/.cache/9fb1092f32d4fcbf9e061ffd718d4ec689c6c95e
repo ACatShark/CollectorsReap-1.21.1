@@ -1,4 +1,4 @@
-// 1.21.1	2026-08-19T13:02:24.2000287	Recipes
+// 1.21.1	2026-08-24T01:27:14.460671	Recipes
 a83ca16b96e801090a41cb43018e4b260d3519a6 data/collectorsreap/advancement/recipes/building_blocks/chiseled_lucuma_bookshelf.json
 1391fb37ea107e55491fb1fb449403948b7f793e data/collectorsreap/advancement/recipes/building_blocks/gilded_lucuma_crate.json
 9682729469ba07765847bc3ee09c155b1aeb5d7e data/collectorsreap/advancement/recipes/building_blocks/gilded_lucuma_from_gilded_lucuma_crate.json
@@ -40,7 +40,7 @@ b650641e8870a87440590bbb85bc5480fd8710e9 data/collectorsreap/advancement/recipes
 e64a459b36e003dcbdbc8328d49ac8175d07d1da data/collectorsreap/advancement/recipes/food/baked_portobello_cap_from_campfire_cooking.json
 5ccbac1aa95d61a3cffbb766c80cdf7911d4beda data/collectorsreap/advancement/recipes/food/baked_portobello_cap_from_smoking.json
 320a773dd117e38246fd167421faa616f8f18b0b data/collectorsreap/advancement/recipes/food/bullet_pepper_popper.json
-8bc85ded45da3f1de4cee24805cf845765009f2d data/collectorsreap/advancement/recipes/food/buttered_legs.json
+5b49b0d5c32ab7121d3d98ce2bf9a866fc748036 data/collectorsreap/advancement/recipes/food/buttered_legs.json
 40173b7594e424191f1ec5cc0223596775e0e666 data/collectorsreap/advancement/recipes/food/candied_lime.json
 0e23956e2bf80bda0217756758d9cc8e2b3f0917 data/collectorsreap/advancement/recipes/food/cannoli.json
 c5ad65334b6be9d33c762cffb40653a94604aca3 data/collectorsreap/advancement/recipes/food/carbonara_pasta.json
@@ -207,7 +207,7 @@ b7de8704f278dcb760469922ba4875a7842fe32f data/collectorsreap/recipe/dried_pink_d
 79eb1b34343cb7b758a7ba7cd30f1d21634438a8 data/collectorsreap/recipe/food/berry_limeade.json
 aa23873b1cc5f0008facb2d1ca910b589c0c68bb data/collectorsreap/recipe/food/big_rice_ball.json
 52a49ef6abfa932907222efd53d0c161d91cd140 data/collectorsreap/recipe/food/bullet_pepper_popper.json
-a0f268c81c689808e9c60f6881ea61f0b9853ec5 data/collectorsreap/recipe/food/buttered_legs.json
+3f720b7ada9decd8aa7599ef99b93bdc4add48df data/collectorsreap/recipe/food/buttered_legs.json
 65be355e4c8a9b9768f0a0ec8383c1d27820cc24 data/collectorsreap/recipe/food/candied_lime.json
 b0c99e9f3fc0c47193b903f59d9578ac55ef8f66 data/collectorsreap/recipe/food/cannoli.json
 ee6e192baf6eec57426974371d50b69cc9171e47 data/collectorsreap/recipe/food/carbonara_pasta.json

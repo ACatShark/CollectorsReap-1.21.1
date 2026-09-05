@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "neapolitan:mint_leaves"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:mint_gummy"
+                        "id":  "collectorsreap:mint_gummy"
                     }
                 ]
 }

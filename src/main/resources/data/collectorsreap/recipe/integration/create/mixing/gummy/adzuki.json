@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "neapolitan:roasted_adzuki_beans"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:adzuki_gummy"
+                        "id":  "collectorsreap:adzuki_gummy"
                     }
                 ]
 }

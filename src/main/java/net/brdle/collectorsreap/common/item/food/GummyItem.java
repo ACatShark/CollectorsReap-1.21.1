@@ -3,13 +3,8 @@ package net.brdle.collectorsreap.common.item.food;
 import net.brdle.collectorsreap.Util;
 import net.brdle.collectorsreap.compat.Modid;
 import net.brdle.collectorsreap.data.CRItemTags;
-import net.minecraft.ChatFormatting;
-import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -36,22 +31,6 @@ public class GummyItem extends CompatConsumable {
 	@Override
 	public void appendHoverText(@NotNull ItemStack stack, @NotNull Item.TooltipContext context, @NotNull List<Component> comps, @NotNull TooltipFlag isAdvanced) {
 		super.appendHoverText(stack, context, comps, isAdvanced);
-		if (this.enabled() && stack.is(CRItemTags.MOB_FEEDABLE_GUMMIES)) {
-			comps.add(Component.empty());
-			comps.add(Util.crTooltip(Util.name(this) + ".when_feeding").withStyle(ChatFormatting.GRAY));
-			for (MobEffectInstance effectInstance : this.getEffects(stack, null)) {
-				MutableComponent effectDescription = Component.literal(" ");
-				effectDescription.append(Component.translatable(effectInstance.getDescriptionId()));
-				Holder<MobEffect> effect = effectInstance.getEffect();
-				if (effectInstance.getAmplifier() > 0) {
-					effectDescription.append(" ").append(Component.translatable("potion.potency." + effectInstance.getAmplifier()));
-				}
-				if (effectInstance.getDuration() > 20) {
-					effectDescription.append(" (").append(MobEffectUtil.formatDuration(effectInstance, 1.0F, 1.0F)).append(")");
-				}
-				comps.add(effectDescription.withStyle(effect.value().getCategory().getTooltipFormatting()));
-			}
-		}
 	}
 
 	protected List<MobEffectInstance> getEffects(@NotNull ItemStack stack, @Nullable LivingEntity consumer) {

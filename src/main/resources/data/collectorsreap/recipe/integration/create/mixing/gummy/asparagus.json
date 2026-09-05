@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:vegetables/asparagus"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:asparagus_aspic"
+                        "id":  "collectorsreap:asparagus_aspic"
                     }
                 ]
 }

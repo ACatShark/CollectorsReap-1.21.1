@@ -24,7 +24,7 @@
                    { "item": { "id": "collectorsreap:pink_dragon_fruit" } },
                    {
                        "chance":  0.3,
-                       "id":  "minecraft:pink_dye"
+                       "item": { "id": "minecraft:pink_dye" }
                    }
                ],
     "tool":  {

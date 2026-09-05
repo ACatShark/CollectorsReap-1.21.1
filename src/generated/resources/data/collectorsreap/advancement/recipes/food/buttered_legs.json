@@ -7,11 +7,11 @@
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chieftain_leg": {
+    "has_cooked_crab": {
       "conditions": {
         "items": [
           {
-            "items": "collectorsreap:chieftain_leg"
+            "items": "#c:cooked_crab_meat"
           }
         ]
       },
@@ -27,7 +27,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chieftain_leg"
+      "has_cooked_crab"
     ]
   ],
   "rewards": {

@@ -113,17 +113,9 @@ public abstract class FruitBushBlock extends TallBushCropBlock {
 			pos = pos.below();
 		}
 		if (state.getValue(AGE) == MAX_AGE) {
-			if (state.getBlock() instanceof PomegranateBushBlock && !stack.is(Tags.Items.TOOLS_SHEAR)) {
-				player.hurt(player.damageSources().sweetBerryBush(), 1F);
-			}
-			this.dropFruit(level, pos);
-			level.playSound(null, pos, this.getPickSound(), SoundSource.BLOCKS, 1F, 0.8F + level.getRandom().nextFloat() * 0.4F);
-			BlockState picked = state.setValue(AGE, MAX_AGE - 2);
-			level.setBlock(pos, picked, 2); // Revert to pre-flowering
-			level.setBlock(pos.above(), picked.setValue(HALF, DoubleBlockHalf.UPPER), 2); // Revert upper to pre-flowering
-			level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, picked));
+			this.pickFruit(state, level, pos, player, stack);
 			return ItemInteractionResult.sidedSuccess(level.isClientSide());
-		} else if (stack.getItem() instanceof AxeItem && !state.hasProperty(STUNTED)) {
+		} else if (stack.getItem() instanceof AxeItem && !state.getValue(STUNTED)) {
 			BlockState stunted = state.setValue(STUNTED, true);
 			level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1F, 1F);
 			level.setBlockAndUpdate(pos, stunted);
@@ -133,6 +125,34 @@ public abstract class FruitBushBlock extends TallBushCropBlock {
 			return ItemInteractionResult.sidedSuccess(level.isClientSide());
 		}
 		return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+	}
+
+	// NeoForge 1.21.1 splits Block#use into useItemOn (item in hand) and
+	// useWithoutItem (empty hand). The empty-hand path was missing, so players
+	// could not harvest fruit from mature bushes by hand.
+	@Override
+	protected @NotNull InteractionResult useWithoutItem(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Player player, @NotNull BlockHitResult hit) {
+		if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {
+			state = level.getBlockState(pos.below());
+			pos = pos.below();
+		}
+		if (state.getValue(AGE) == MAX_AGE) {
+			this.pickFruit(state, level, pos, player, ItemStack.EMPTY);
+			return InteractionResult.sidedSuccess(level.isClientSide());
+		}
+		return InteractionResult.PASS;
+	}
+
+	private void pickFruit(BlockState state, Level level, BlockPos pos, Player player, ItemStack stack) {
+		if (state.getBlock() instanceof PomegranateBushBlock && !stack.is(Tags.Items.TOOLS_SHEAR)) {
+			player.hurt(player.damageSources().sweetBerryBush(), 1F);
+		}
+		this.dropFruit(level, pos);
+		level.playSound(null, pos, this.getPickSound(), SoundSource.BLOCKS, 1F, 0.8F + level.getRandom().nextFloat() * 0.4F);
+		BlockState picked = state.setValue(AGE, MAX_AGE - 2);
+		level.setBlock(pos, picked, 2); // Revert to pre-flowering
+		level.setBlock(pos.above(), picked.setValue(HALF, DoubleBlockHalf.UPPER), 2); // Revert upper to pre-flowering
+		level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, picked));
 	}
 
 	public int getMaxBonus() {

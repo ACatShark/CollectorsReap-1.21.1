@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:coffee_beans"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:coffee_gummy"
+                        "id":  "collectorsreap:coffee_gummy"
                     }
                 ]
 }

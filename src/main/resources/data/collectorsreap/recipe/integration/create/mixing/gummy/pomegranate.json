@@ -15,7 +15,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:fruits/pomegranate"
@@ -33,7 +33,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:pomegranate_gummy"
+                        "id":  "collectorsreap:pomegranate_gummy"
                     }
                 ]
 }

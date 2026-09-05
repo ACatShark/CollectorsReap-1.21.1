@@ -138,29 +138,29 @@ public class CRBlocks {
 	public static final DeferredHolder<Block, ? extends Block> DAMSELFLOWER_CROP = registerBlockNoItem("damselflower_crop", () ->
 		new DamselflowerCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> DAMSELFLOWER = registerBlock("damselflower", () ->
-		new FlowerBlock(MobEffects.MOVEMENT_SPEED, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+		new HarvestableFlowerBlock(MobEffects.MOVEMENT_SPEED, 5, () -> CRBlocks.DAMSELFLOWER.get().asItem(), CRBlocks.DAMSELFLOWER_CROP, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> POTTED_DAMSELFLOWER = registerBlockNoItem("potted_damselflower", () ->
 		new FlowerPotBlock(DAMSELFLOWER.get(), PropertyUtil.flowerPot()));
 	public static final DeferredHolder<Block, ? extends Block> MOONTEAR_CROP = registerBlockNoItem("moontear_crop", () ->
 		new MoontearCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> MOONTEAR = registerBlock("moontear", () ->
-		new FlowerBlock(MobEffects.NIGHT_VISION, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+		new HarvestableFlowerBlock(MobEffects.NIGHT_VISION, 5, () -> CRBlocks.MOONTEAR.get().asItem(), CRBlocks.MOONTEAR_CROP, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> POTTED_MOONTEAR = registerBlockNoItem("potted_moontear", () ->
 		new FlowerPotBlock(MOONTEAR.get(), PropertyUtil.flowerPot()));
 	public static final DeferredHolder<Block, ? extends Block> SKULL_LILY_CROP = registerBlockNoItem("skull_lily_crop", () ->
 		new SkullLilyCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> SKULL_LILY = registerBlock("skull_lily", () ->
-		new FlowerBlock(MobEffects.POISON, 5, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+		new HarvestableFlowerBlock(MobEffects.POISON, 5, () -> CRBlocks.SKULL_LILY.get().asItem(), CRBlocks.SKULL_LILY_CROP, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> POTTED_SKULL_LILY = registerBlockNoItem("potted_skull_lily", () ->
 		new FlowerPotBlock(SKULL_LILY.get(), PropertyUtil.flowerPot()));
 	public static final DeferredHolder<Block, ? extends Block> BULBOUS_ROSE_CROP = registerBlockNoItem("bulbous_rose_crop", () ->
-		new TallFlowerCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
+		new TallFlowerCropBlock(() -> CRBlocks.BULBOUS_ROSE.get().asItem(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> BULBOUS_ROSE = registerBlock("bulbous_rose", () ->
-		new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+		new PickableTallFlowerBlock(CRItems.BULBOUS_ROSE_SEEDS, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> HEARTPETALS_CROP = registerBlockNoItem("heartpetals_crop", () ->
-		new TallFlowerCropBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
+		new TallFlowerCropBlock(() -> CRBlocks.HEARTPETALS.get().asItem(), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY)));
 	public static final DeferredHolder<Block, ? extends Block> HEARTPETALS = registerBlock("heartpetals", () ->
-		new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+		new PickableTallFlowerBlock(CRItems.HEARTPETALS_SEEDS, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.CROP).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
 	// Sliceables
 	public static final DeferredHolder<Block, ? extends Block> PANETTONE = registerBlockNoItem("panettone",

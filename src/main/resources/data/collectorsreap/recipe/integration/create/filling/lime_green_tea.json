@@ -31,16 +31,14 @@
                             "item":  "minecraft:glass_bottle"
                         },
                         {
+                            "type":  "neoforge:single",
                             "amount":  250,
-                            "fluid":  "collectorsreap:lime_green_tea",
-                            "nbt":  {
-
-                                    }
+                            "fluid":  "collectorsreap:lime_green_tea"
                         }
                     ],
     "results":  [
                     {
-                        "item":  "collectorsreap:lime_green_tea"
+                        "id":  "collectorsreap:lime_green_tea"
                     }
                 ]
 }

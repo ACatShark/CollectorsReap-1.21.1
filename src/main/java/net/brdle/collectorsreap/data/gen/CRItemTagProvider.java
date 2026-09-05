@@ -295,7 +295,7 @@ public class CRItemTagProvider extends ItemTagsProvider {
 			.add(CRItems.COOKED_PLATINUM_BASS.get())
 			.add(CRItems.COOKED_PLATINUM_BASS_SLICE.get());
 		this.tag(CRItemTags.HOT_NETHER_FRUITS)
-			.addOptionalTag(Modid.MND.rl("bullet_pepper"))
+			.addOptional(Modid.MND.rl("bullet_pepper"))
 			.addOptional(Modid.ND.rl("propelpearl"));
 		this.tag(CRItemTags.RAW_HOGLIN)
 			.addOptional(Modid.MND.rl("hoglin_loin"))

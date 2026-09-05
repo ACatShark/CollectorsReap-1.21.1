@@ -26,7 +26,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "neapolitan:dried_vanilla_pods"
@@ -44,7 +44,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:vanilla_gummy"
+                        "id":  "collectorsreap:vanilla_gummy"
                     }
                 ]
 }

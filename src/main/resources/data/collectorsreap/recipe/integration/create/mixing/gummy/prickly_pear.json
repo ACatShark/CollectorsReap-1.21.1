@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:fruits/prickly_pear"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:prickly_pear_gummy"
+                        "id":  "collectorsreap:prickly_pear_gummy"
                     }
                 ]
 }

@@ -15,7 +15,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "collectorsreap:lime"
@@ -33,7 +33,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:lime_gummy"
+                        "id":  "collectorsreap:lime_gummy"
                     }
                 ]
 }

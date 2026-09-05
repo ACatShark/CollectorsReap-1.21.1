@@ -13,13 +13,13 @@
   "experience": 1.0,
   "ingredients": [
     {
-      "item": "collectorsreap:chieftain_leg"
+      "tag": "c:cooked_crab_meat"
     },
     {
-      "item": "collectorsreap:chieftain_leg"
+      "tag": "c:cooked_crab_meat"
     },
     {
-      "item": "collectorsreap:chieftain_leg"
+      "tag": "c:cooked_crab_meat"
     },
     {
       "tag": "c:drinks/milk"

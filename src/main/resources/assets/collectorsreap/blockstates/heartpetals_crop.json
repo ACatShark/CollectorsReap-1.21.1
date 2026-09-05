@@ -10,7 +10,7 @@
       "model": "collectorsreap:block/heartpetals_crop_bottom_stage1"
     },
     "age=1,half=upper": {
-      "model": "collectorsreap:block/heartpetals_crop_stage1"
+      "model": "collectorsreap:block/heartpetals_crop_top_stage1"
     },
     "age=2,half=lower": {
       "model": "collectorsreap:block/heartpetals_crop_bottom_stage2"

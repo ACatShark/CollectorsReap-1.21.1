@@ -44,7 +44,7 @@
           }
         ],
         "result": {
-          "item": "neapolitan:neapolitan_ice_cream"
+          "id": "neapolitan:neapolitan_ice_cream"
         }
       }
     }

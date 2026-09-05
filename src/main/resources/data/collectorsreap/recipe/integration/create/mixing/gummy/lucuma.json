@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "collectorsreap:lucuma"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:lucuma_gummy"
+                        "id":  "collectorsreap:lucuma_gummy"
                     }
                 ]
 }

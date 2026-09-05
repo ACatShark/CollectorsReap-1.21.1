@@ -1,7 +1,9 @@
 {
-  "parent": "farmersdelight:block/crop_cross",
+  "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
   "textures": {
+    "particle": "collectorsreap:block/pink_dragon_fruits_stage2",
     "cross": "collectorsreap:block/pink_dragon_fruits_stage2"
   }
 }

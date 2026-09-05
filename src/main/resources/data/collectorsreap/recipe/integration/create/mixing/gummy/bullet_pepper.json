@@ -14,7 +14,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "mynethersdelight:bullet_pepper"
@@ -32,7 +32,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:bullet_pepper_gummy"
+                        "id":  "collectorsreap:bullet_pepper_gummy"
                     }
                 ]
 }

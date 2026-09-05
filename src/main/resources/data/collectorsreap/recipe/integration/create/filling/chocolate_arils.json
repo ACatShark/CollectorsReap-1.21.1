@@ -24,16 +24,14 @@
                             "tag":  "c:seeds/pomegranate"
                         },
                         {
+                            "type":  "neoforge:single",
                             "amount":  250,
-                            "fluid":  "create:chocolate",
-                            "nbt":  {
-
-                                    }
+                            "fluid":  "create:chocolate"
                         }
                     ],
     "results":  [
                     {
-                        "item":  "collectorsreap:chocolate_arils"
+                        "id":  "collectorsreap:chocolate_arils"
                     }
                 ]
 }

@@ -10,7 +10,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "tag":  "c:vegetables/carrot"
@@ -28,7 +28,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:carrot_gummy"
+                        "id":  "collectorsreap:carrot_gummy"
                     }
                 ]
 }

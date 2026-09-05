@@ -15,7 +15,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "collectorsreap:pink_dragon_fruit"
@@ -33,7 +33,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:pink_dragon_fruit_gummy"
+                        "id":  "collectorsreap:pink_dragon_fruit_gummy"
                     }
                 ]
 }

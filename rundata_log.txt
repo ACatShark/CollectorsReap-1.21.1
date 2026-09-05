@@ -1,0 +1,90 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/17046/.gradle/wrapper/dists/gradle-8.9-bin/78qddjpeqn5v6yec3xb8kv9ca/gradle-8.9/lib/native-platform-0.22-milestone-26.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :createMinecraftArtifacts UP-TO-DATE
+
+> Task :compileJava
+注: C:\Users\17046\Desktop\CollectorsReap-1.20.1\CollectorsReap-1.21.1\src\main\java\net\brdle\collectorsreap\common\block\CRBlocks.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :processResources UP-TO-DATE
+> Task :classes
+> Task :extractDatagenResources UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :writeDataLegacyClasspath UP-TO-DATE
+> Task :prepareDataRun UP-TO-DATE
+
+> Task :runData
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[02:59:06] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatadev, --assetIndex, 17, --assetsDir, C:\\Users\\17046\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430, --mod, collectorsreap, --all, --output, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\src\\generated\\resources, --existing, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\src\\main\\resources, --existing, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\build\\extracted_resources]
+[02:59:06] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.11+9-LTS-211
+[02:59:06] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[02:59:06] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatadev
+[02:59:06] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/17046/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[02:59:06] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[02:59:06] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Blueprint 8.1.2-beta (blueprint)
+		Boatload 6.0.2 (boatload)
+		Brewin' And Chewin' 4.5.0 (brewinandchewin)
+		Collector's Reap 1.0.0 (collectorsreap)
+		Farmer's Delight 1.3.3 (farmersdelight)
+		Farmer's Respite 3.0.0 (farmersrespite)
+		Greenhouse Config 2.2.3+1.21.1 (greenhouseconfig)
+		Greenhouse Config - Night Config 1.1.0 (greenhouseconfig_night_config)
+		Greenhouse Config - TOML 1.1.0 (greenhouseconfig_toml)
+		Jade 15.10.6+neoforge (jade)
+		Just Enough Items 19.44.0.401 (jei)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+[02:59:07] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[02:59:07] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatadev' with arguments [--gameDir, ., --assetsDir, C:\Users\17046\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --mod, collectorsreap, --all, --output, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\src\\generated\\resources, --existing, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\src\\main\\resources, --existing, C:\\Users\\17046\\Desktop\\CollectorsReap-1.20.1\\CollectorsReap-1.21.1\\build\\extracted_resources]
+[02:59:07] [main/WARN] [mixin/]: Reference map '' for brewinandchewin.mixins.json could not be read. If this is a development environment you can ignore this message
+[02:59:07] [main/WARN] [mixin/]: Reference map 'blueprint.refmap.json' for blueprint.mixins.json could not be read. If this is a development environment you can ignore this message
+[02:59:07] [main/WARN] [mixin/]: Reference map 'boatload.refmap.json' for boatload.mixins.json could not be read. If this is a development environment you can ignore this message
+[02:59:08] [main/INFO] [ne.ne.ne.da.lo.DatagenModLoader/]: Initializing Data Gatherer for mods [collectorsreap]
+[02:59:08] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[02:59:13] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[02:59:13] [modloading-worker-0/INFO] [me.je.li.lo.PluginCaller/]: Sending ConfigManager...
+[02:59:13] [modloading-worker-0/INFO] [me.je.li.lo.PluginCaller/]: Sending ConfigManager took 4.208 milliseconds
+[02:59:14] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/17046/Desktop/CollectorsReap-1.20.1/CollectorsReap-1.21.1/build/moddev/artifacts/neoforge-21.1.248.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[02:59:14] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/17046/Desktop/CollectorsReap-1.20.1/CollectorsReap-1.21.1/build/moddev/artifacts/neoforge-21.1.248.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Registries
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Registries finished after 27 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:block mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:block mod id collectorsreap finished after 13 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:item mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:item mod id collectorsreap finished after 13 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:entity_type mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:entity_type mod id collectorsreap finished after 1 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:mob_effect mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:mob_effect mod id collectorsreap finished after 1 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:worldgen/biome mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:worldgen/biome mod id collectorsreap finished after 2 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Recipes
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Recipes finished after 120 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Loot Tables
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Loot Tables finished after 77 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Global Loot Modifiers : collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Global Loot Modifiers : collectorsreap finished after 12 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Tags for minecraft:trim_material mod id collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Tags for minecraft:trim_material mod id collectorsreap finished after 0 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Block States: collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Block States: collectorsreap finished after 136 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Item Models: collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Item Models: collectorsreap finished after 36 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: Languages: en_us for mod: collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Languages: en_us for mod: collectorsreap finished after 4 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: Starting provider: atlases generator for collectorsreap
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: atlases generator for collectorsreap finished after 11 ms
+[02:59:15] [main/INFO] [minecraft/DataGenerator]: All providers took: 472 ms
+[02:59:15] [main/INFO] [minecraft/HashCache]: Caching: total files: 1448, old count: 1452, new count: 1449, removed stale: 0, written: 3
+
+BUILD SUCCESSFUL in 34s
+8 actionable tasks: 2 executed, 6 up-to-date

@@ -15,7 +15,7 @@
                                 }
                             ],
     "type":  "create:mixing",
-    "heatRequirement":  "heated",
+    "heat_requirement":  "heated",
     "ingredients":  [
                         {
                             "item":  "minecraft:melon_slice"
@@ -33,7 +33,7 @@
     "results":  [
                     {
                         "count":  9,
-                        "item":  "collectorsreap:melon_gummy"
+                        "id":  "collectorsreap:melon_gummy"
                     }
                 ]
 }

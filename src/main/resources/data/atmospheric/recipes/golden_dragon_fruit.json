@@ -36,7 +36,7 @@
           "###"
         ],
         "result": {
-          "item": "atmospheric:golden_dragon_fruit"
+          "id": "atmospheric:golden_dragon_fruit"
         },
         "show_notification": true
       }

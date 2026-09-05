@@ -11,7 +11,7 @@
       "recipe": {
         "type": "farmersdelight:cooking",
         "container": {
-          "item": "minecraft:bowl"
+          "id": "minecraft:bowl"
         },
         "cookingtime": 200,
         "experience": 1.0,
@@ -31,7 +31,7 @@
         ],
         "recipe_book_tab": "meals",
         "result": {
-          "item": "brewinandchewin:creamy_onion_soup"
+          "id": "brewinandchewin:creamy_onion_soup"
         }
       }
     }

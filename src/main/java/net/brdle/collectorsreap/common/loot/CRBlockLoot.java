@@ -184,13 +184,13 @@ public class CRBlockLoot extends BlockLootSubProvider {
 		this.dropOther(CRBlocks.PLATINUM_BASS_ROE.get(), CRItems.PLATINUM_BASS_ROE.get());
 		this.dropOther(CRBlocks.TIGER_PRAWN_ROE.get(), CRItems.TIGER_PRAWN_ROE.get());
 		this.dropOther(CRBlocks.DAMSELFLOWER_CROP.get(), CRItems.DAMSELFLOWER_SEEDS.get());
-		this.dropSelf(CRBlocks.DAMSELFLOWER.get());
+		this.empty(CRBlocks.DAMSELFLOWER);
 		this.dropPottedContents(CRBlocks.POTTED_DAMSELFLOWER.get());
 		this.dropOther(CRBlocks.MOONTEAR_CROP.get(), CRItems.MOONTEAR_SEEDS.get());
-		this.dropSelf(CRBlocks.MOONTEAR.get());
+		this.empty(CRBlocks.MOONTEAR);
 		this.dropPottedContents(CRBlocks.POTTED_MOONTEAR.get());
 		this.dropOther(CRBlocks.SKULL_LILY_CROP.get(), CRItems.SKULL_LILY_SEEDS.get());
-		this.dropSelf(CRBlocks.SKULL_LILY.get());
+		this.empty(CRBlocks.SKULL_LILY);
 		this.dropPottedContents(CRBlocks.POTTED_SKULL_LILY.get());
 		this.tallFlower(CRBlocks.BULBOUS_ROSE.get());
 		this.tallFlower(CRBlocks.HEARTPETALS.get());

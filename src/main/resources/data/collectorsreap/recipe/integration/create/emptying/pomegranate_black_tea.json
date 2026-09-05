@@ -33,11 +33,11 @@
                     ],
     "results":  [
                     {
-                        "item":  "minecraft:glass_bottle"
+                        "id":  "minecraft:glass_bottle"
                     },
                     {
                         "amount":  250,
-                        "fluid":  "collectorsreap:pomegranate_black_tea"
+                        "id":  "collectorsreap:pomegranate_black_tea"
                     }
                 ]
 }

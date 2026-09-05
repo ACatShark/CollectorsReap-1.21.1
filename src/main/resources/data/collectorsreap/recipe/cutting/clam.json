@@ -24,11 +24,11 @@
                    { "item": { "id": "collectorsreap:clam_meat", "count": 2 } },
                    {
                        "chance":  0.5,
-                       "id":  "collectorsreap:clam_meat"
+                       "item": { "id": "collectorsreap:clam_meat" }
                    },
                    {
                        "chance":  0.1,
-                       "id":  "collectorsreap:lunar_pearl"
+                       "item": { "id": "collectorsreap:lunar_pearl" }
                    }
                ],
     "tool":  {

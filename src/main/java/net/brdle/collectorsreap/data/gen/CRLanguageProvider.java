@@ -95,7 +95,6 @@ public class CRLanguageProvider extends LanguageProvider {
 		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.URCHIN_DART), "Poisonous projectiles that can be thrown by hand or fired using Bamboo in your offhand.");
 		add("desc." + CollectorsReap.MODID + "." + Util.name(CRItems.STRAW_BRUSH), "Steal pollen from a Bee and use it to allow a plant to reach later stages.");
 		add("itemGroup." + CollectorsReap.MODID, "Collector's Reap");
-		add("config.jade.plugin_" + CollectorsReap.MODID + ".crop_progress", "Crop Progress");
 	}
 
 	private void addEffects() {

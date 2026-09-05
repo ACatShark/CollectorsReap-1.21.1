@@ -1,0 +1,70 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:torchflower_seeds"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pitcher_pod"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "collectorsreap:damselflower_seeds",
+          "conditions": [
+            {
+              "condition": "collectorsreap:enabled",
+              "item": "damselflower_seeds"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "collectorsreap:moontear_seeds",
+          "conditions": [
+            {
+              "condition": "collectorsreap:enabled",
+              "item": "moontear_seeds"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "collectorsreap:skull_lily_seeds",
+          "conditions": [
+            {
+              "condition": "collectorsreap:enabled",
+              "item": "skull_lily_seeds"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "collectorsreap:bulbous_rose_seeds",
+          "conditions": [
+            {
+              "condition": "collectorsreap:enabled",
+              "item": "bulbous_rose_seeds"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "collectorsreap:heartpetals_seeds",
+          "conditions": [
+            {
+              "condition": "collectorsreap:enabled",
+              "item": "heartpetals_seeds"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:gameplay/sniffer_digging"
+}

@@ -211,9 +211,9 @@ public class CRRecipeProvider extends BlueprintRecipeProvider implements ICondit
 				.addIngredient(CRItemTags.CROPS_ONION),
 			"food/crab_noodles", finished, enabled(CRItems.CRAB_NOODLES));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(CRItems.BUTTERED_LEGS.get(), 1, 200, 1F, Items.BOWL)
-				.addIngredient(CRItems.CHIEFTAIN_LEG.get(), 3)
+				.addIngredient(Ingredient.of(CRItemTags.COOKED_CRAB_MEAT), 3)
 				.addIngredient(CRItemTags.MILK)
-				.unlockedBy("has_chieftain_leg", has(CRItems.CHIEFTAIN_LEG.get())),
+				.unlockedBy("has_cooked_crab", has(CRItemTags.COOKED_CRAB_MEAT)),
 			"food/buttered_legs", finished, enabled(CRItems.BUTTERED_LEGS));
 		wrap(CookingPotRecipeBuilder.cookingPotRecipe(CRItems.CLAM_CHOWDER.get(), 1, 200, 1F, Items.BREAD)
 				.addIngredient(CRItemTags.RAW_CLAM)

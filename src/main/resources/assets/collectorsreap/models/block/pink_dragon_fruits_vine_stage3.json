@@ -1,9 +1,9 @@
 {
-  "parent": "farmersdelight:block/crop_with_rope",
+  "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
   "textures": {
-    "crop": "collectorsreap:block/pink_dragon_fruits_vine_stage3",
-    "rope_side": "collectorsreap:block/pink_dragon_fruits_coiled_rope",
-    "rope_top": "farmersdelight:block/rope_top"
+    "particle": "collectorsreap:block/pink_dragon_fruits_vine_stage3",
+    "cross": "collectorsreap:block/pink_dragon_fruits_vine_stage3"
   }
 }

@@ -15,7 +15,7 @@
           }
         ],
         "result": {
-          "item": "this_item:does_not_exist"
+          "id": "this_item:does_not_exist"
         }
       }
     }
