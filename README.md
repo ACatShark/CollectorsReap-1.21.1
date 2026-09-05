@@ -7,7 +7,7 @@ Farmer's Delight addon with foods scavenged from the wild.
   <img src="https://cf.way2muchnoise.eu/full_807101_downloads.svg" alt="Curseforge Downloads">
 </a>
 
-[![1.20.1](https://github.com/brnbrd/CollectorsReap/actions/workflows/build-1.20.1.yml/badge.svg?branch=1.20.1)](https://github.com/brnbrd/CollectorsReap/actions/workflows/build-1.20.1.yml)
+
 
 ## 1.21.1 NeoForge Port
 This branch has been ported to **NeoForge 1.21.1** (Minecraft 1.21.1, loaders >= 21.1).
